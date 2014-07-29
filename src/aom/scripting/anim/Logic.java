@@ -3,7 +3,7 @@ package aom.scripting.anim;
 import aom.scripting.datatypes.string;
 
 /**
- * This enum lists all possible logics that can be used in an anim script.
+ * This interface lists all possible logics that can be used in an animation script.
  * 
  * A typical logic construct using parameters is as follows:
  * <pre>
