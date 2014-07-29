@@ -338,7 +338,7 @@ public class Unit {
 	 * 
 	 * @sync
 	 */
-	public native void uiDeleteSelectedUnit();
+	public native void uiDeleteSelectedUnit(int keyState);
 
 	/** 
 	 * Removes specified unit, or selected unit if not ID is specified.

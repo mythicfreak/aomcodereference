@@ -72,7 +72,7 @@ public abstract class Console {
 	 * </p>
 	 * 
 	 * <p>
-	 * Gadgets: (all gadget names can be used as context, but may only execute if the mapping is defined in the same file as the gadget (e.g. in uimain.xml)).
+	 * Gadgets: all gadget names can be used as context, but may only execute if the mapping is defined in the same file as the gadget (e.g. in uimain.xml).
 	 * <tt><ul>
 	 * 		<li>detailHelp</li>
 	 * 		<li>fakeTechTree</li>
@@ -84,7 +84,7 @@ public abstract class Console {
 	 * 	</ul></tt>
 	 * </p>
 	 * 
-	 * <p>All EditModes</p>
+	 * <p>All Edit Modes</p>
 	 * 
 	 * @param command Any function found in this package.
 	 * 

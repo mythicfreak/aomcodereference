@@ -39,7 +39,7 @@ public class Camera {
 	 * 
 	 * @since AoT 
 	 */
-	public native void cameraLimit(int State);
+	public native void cameraLimit(int state);
 
 	/** Sets whether camera limiting is on.*/
 	public native void cameraRotate(int state);
