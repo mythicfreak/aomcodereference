@@ -1,0 +1,267 @@
+<!-- 
+	General Note: constructs like attribute="" indicate that this attribute is enabled.
+	Think of it as attribute="true". On the other hand, if the attribute is not mentioned
+	you can think of it as attribute="false".
+-->
+
+<!-- Define a button. Typically part of a radioset gadget, but also available as standalone. -->
+<!ELEMENT button ( #PCDATA ) >
+<!-- Link a Console Command to this button's OnClick event. Most are hardcoded in the exe and take precedence over commands defined here. -->
+<!ATTLIST button command CDATA #IMPLIED >
+
+<!-- Link a Console Command to his gadget's OnClick event. -->
+<!ELEMENT command ( #PCDATA ) >
+
+<!-- Define a single dropdown item in a dropdown box. This is typically encapsulated in a "textField" gadget that acts as a label. -->
+<!ELEMENT dropdown ( #PCDATA ) >
+<!-- Link a Console Command to his dropdown's OnClick event. -->
+<!ATTLIST dropdown command CDATA #IMPLIED >
+
+<!ELEMENT gadget ( #PCDATA | button | command | dropdown | gadget | horizscrollbar | listitem | stateentry | submenu | vertscrollbar )* >
+<!ATTLIST gadget a-dtype 									CDATA #IMPLIED > <!-- always contains "textFontSize number Z number" -->
+<!ATTLIST gadget activateondown 							CDATA #IMPLIED >
+<!ATTLIST gadget allowdoubleclick 							CDATA #IMPLIED >
+<!ATTLIST gadget alphasort 									CDATA #IMPLIED > <!-- sort this list alphabetically -->
+<!ATTLIST gadget artsize1024 								CDATA #IMPLIED >
+<!ATTLIST gadget autoclose 									CDATA #IMPLIED >
+<!ATTLIST gadget background									CDATA #IMPLIED > <!-- specify a background image -->
+<!ATTLIST gadget backgroundalpha 							CDATA #IMPLIED > <!-- 0.0 <= alpha <= 1.0 -->
+<!ATTLIST gadget backgroundcolor							CDATA #IMPLIED > <!-- specify a background color in RBG -->
+<!--ATTLIST gadget backgroundmesh 							CDATA #IMPLIED--><!-- only used in old test files -->
+<!ATTLIST gadget bannerproto 								CDATA #IMPLIED > <!-- define the protounit image of this "idleBanner" gadget -->
+<!ATTLIST gadget bannersize 								CDATA #IMPLIED > <!-- define the size of this "idleBanner" gadget -->
+<!ATTLIST gadget bevel 										CDATA #IMPLIED >
+<!ATTLIST gadget bevelbutton 								CDATA #IMPLIED > <!-- adds a beveled edge to this button, making it appear to stick out -->
+<!ATTLIST gadget bevelinart 								CDATA #IMPLIED >
+<!ATTLIST gadget beveloutart 								CDATA #IMPLIED >
+<!ATTLIST gadget blockmoderendering 						CDATA #IMPLIED >
+<!ATTLIST gadget border1024 								CDATA #IMPLIED >
+<!ATTLIST gadget bottomcapart 								CDATA #IMPLIED >
+<!ATTLIST gadget buttonsize1024 							CDATA #IMPLIED >
+<!ATTLIST gadget centerhoriz 								CDATA #IMPLIED >
+<!ATTLIST gadget centervert 								CDATA #IMPLIED >
+<!ATTLIST gadget checkborder1024 							CDATA #IMPLIED >
+<!ATTLIST gadget checkbutton 								CDATA #IMPLIED >
+<!ATTLIST gadget checkcheckedart 							CDATA #IMPLIED >
+<!ATTLIST gadget checkhighlightart 							CDATA #IMPLIED >
+<!ATTLIST gadget checkuncheckedart 							CDATA #IMPLIED >
+<!ATTLIST gadget clampbackground 							CDATA #IMPLIED >
+<!ATTLIST gadget clampforeground							CDATA #IMPLIED >
+<!ATTLIST gadget closebutton								CDATA #IMPLIED >
+<!ATTLIST gadget closebuttonusealpha 						CDATA #IMPLIED >
+<!ATTLIST gadget closeonesc 								CDATA #IMPLIED > <!-- enable the ESC key to close this gadget -->
+<!ATTLIST gadget columnorder 								CDATA #IMPLIED >
+<!ATTLIST gadget commandpanelbuttonseparation1024 			CDATA #IMPLIED >
+<!ATTLIST gadget commandpanelbuttonsize1024 				CDATA #IMPLIED >
+<!ATTLIST gadget configindex 								CDATA #IMPLIED > <!-- shortcut for Console Command: configToggle(configName), also used in sliders -->
+<!ATTLIST gadget context 									CDATA #IMPLIED >
+<!ATTLIST gadget contextexclusive 							CDATA #IMPLIED >
+<!ATTLIST gadget cursoralwayson 							CDATA #IMPLIED >
+<!ATTLIST gadget datarefreshrate 							CDATA #IMPLIED > <!-- frequency at which the data in this gadget should be updated, typically ranging from 0.5 to 200 -->
+<!ATTLIST gadget dialogdefaultbuttonindex 					CDATA #IMPLIED >
+<!ATTLIST gadget displayname 								CDATA #IMPLIED >
+<!ATTLIST gadget displaypanelinventorysize1024 				CDATA #IMPLIED >
+<!ATTLIST gadget displaypanelmultiportraitbuttonseparation 	CDATA #IMPLIED >
+<!ATTLIST gadget displaypanelpercenttextsize1024 			CDATA #IMPLIED >
+<!ATTLIST gadget displaypanelqueueportraitsize1024 			CDATA #IMPLIED >
+<!ATTLIST gadget displaypanelqueuesize1024 					CDATA #IMPLIED >
+<!ATTLIST gadget displaypanelselectionsize1024 				CDATA #IMPLIED >
+<!ATTLIST gadget dontautoclose 								CDATA #IMPLIED >
+<!ATTLIST gadget donthighlight 								CDATA #IMPLIED >
+<!ATTLIST gadget dropdownbuttonart 							CDATA #IMPLIED >
+<!ATTLIST gadget dropdowndistance 							CDATA #IMPLIED > <!-- int -->
+<!ATTLIST gadget dropdownvisitems 							CDATA #IMPLIED >
+<!ATTLIST gadget editboxalphaonly 							CDATA #IMPLIED >
+<!ATTLIST gadget editboxmaskchars 							CDATA #IMPLIED >
+<!ATTLIST gadget editboxmaxchars 							CDATA #IMPLIED > <!-- int -->
+<!ATTLIST gadget editboxnumericonly 						CDATA #IMPLIED >
+<!ATTLIST gadget editboxposintonly 							CDATA #IMPLIED >
+<!ATTLIST gadget editboxprompt 								CDATA #IMPLIED >
+<!ATTLIST gadget editboxreadonly 							CDATA #IMPLIED >
+<!ATTLIST gadget enableime 									CDATA #IMPLIED >
+<!ATTLIST gadget enterkey 									CDATA #IMPLIED > <!-- typically declared in "editBox" gadgets -->
+<!ATTLIST gadget fade 										CDATA #IMPLIED >
+<!ATTLIST gadget fieldallowdropedits 						CDATA #IMPLIED >
+<!ATTLIST gadget fieldhideoninactive 						CDATA #IMPLIED >
+<!ATTLIST gadget fieldnametextcolor 						CDATA #IMPLIED >
+<!ATTLIST gadget fieldnametextfont 							CDATA #IMPLIED >
+<!ATTLIST gadget fieldnametextfontsize 						CDATA #IMPLIED > <!-- size in pt -->
+<!ATTLIST gadget fieldreadonly 								CDATA #IMPLIED >
+<!ATTLIST gadget fieldrequireenter 							CDATA #IMPLIED >
+<!ATTLIST gadget fieldtextboxcolor 							CDATA #IMPLIED >
+<!ATTLIST gadget fieldval 									CDATA #IMPLIED > <!-- define the initial item index of a scrollList gadget, typically "1" -->
+<!ATTLIST gadget foreground 								CDATA #IMPLIED >
+<!ATTLIST gadget formattextbottomfill 						CDATA #IMPLIED >
+<!ATTLIST gadget formattextconvertuserlf 					CDATA #IMPLIED >
+<!ATTLIST gadget formattextscrolltobottom 					CDATA #IMPLIED >
+<!ATTLIST gadget formattextusedatareplace 					CDATA #IMPLIED >
+<!ATTLIST gadget grabinput 									CDATA #IMPLIED > <!-- tells the UI engine to grab the data entered in this gadget (used in chat and market buy/sell) -->
+<!ATTLIST gadget hidden 									CDATA #IMPLIED > <!-- if declared, this gadget is initially hidden and can later be shown using gadgetReal(gadgetName) -->
+<!ATTLIST gadget history 									CDATA #IMPLIED >
+<!ATTLIST gadget idletype 									CDATA #IMPLIED >
+<!ATTLIST gadget leftcapart 								CDATA #IMPLIED >
+<!ATTLIST gadget listactivateonalphajump 					CDATA #IMPLIED >
+<!ATTLIST gadget listitemheight 							CDATA #IMPLIED > <!-- int -->
+<!ATTLIST gadget locktitlebarmove 							CDATA #IMPLIED >
+<!ATTLIST gadget maskalpha 									CDATA #IMPLIED > <!-- 0.0 <= alpha <= 1.0 -->
+<!ATTLIST gadget maskcolor 									CDATA #IMPLIED >
+<!ATTLIST gadget maskflip 									CDATA #IMPLIED >
+<!ATTLIST gadget maskhorizontal 							CDATA #IMPLIED >
+<!ATTLIST gadget maskinvert 								CDATA #IMPLIED >
+<!ATTLIST gadget maskvertical 								CDATA #IMPLIED >
+<!ATTLIST gadget meshscale 									CDATA #IMPLIED >
+<!ATTLIST gadget meshyaw 									CDATA #IMPLIED >
+<!ATTLIST gadget mouseovertext 								CDATA #IMPLIED >
+<!ATTLIST gadget moveable 									CDATA #IMPLIED > <!-- if declared, the user can move this gadget around in-game -->
+<!ATTLIST gadget name 										ID    #REQUIRED> <!-- A unique name for this gadget. Hardcoded parts in the exe make use of this name. -->
+<!ATTLIST gadget nodatareplace 								CDATA #IMPLIED >
+<!ATTLIST gadget normalcursoralwayson 						CDATA #IMPLIED >
+<!ATTLIST gadget numberfield 								CDATA #IMPLIED >
+<!ATTLIST gadget outlinecolor 								CDATA #IMPLIED >
+<!ATTLIST gadget palettecontentsize1024 					CDATA #IMPLIED >
+<!ATTLIST gadget paletteelemsize1024 						CDATA #IMPLIED >
+<!ATTLIST gadget palettetitlebottom 						CDATA #IMPLIED >
+<!ATTLIST gadget palettetitleright 							CDATA #IMPLIED >
+<!ATTLIST gadget paletteusedropdown 						CDATA #IMPLIED >
+<!ATTLIST gadget progressbarbackground 						CDATA #IMPLIED >
+<!ATTLIST gadget progressbarbackgroundsize 					CDATA #IMPLIED >
+<!ATTLIST gadget progressbarmask 							CDATA #IMPLIED >
+<!ATTLIST gadget radiobtnborder1024 						CDATA #IMPLIED >
+<!ATTLIST gadget radiocheckedart 							CDATA #IMPLIED >
+<!ATTLIST gadget radiohighlightart 							CDATA #IMPLIED >
+<!ATTLIST gadget radiosetbuttonsize1024 					CDATA #IMPLIED >
+<!ATTLIST gadget radiosetdefaultbuttonindex 				CDATA #IMPLIED >
+<!ATTLIST gadget radiosethorizlayout 						CDATA #IMPLIED >
+<!ATTLIST gadget radiosettitle 								CDATA #IMPLIED >
+<!ATTLIST gadget radiosettitleleft 							CDATA #IMPLIED >
+<!ATTLIST gadget radiouncheckedart 							CDATA #IMPLIED >
+<!ATTLIST gadget refreshonreal 								CDATA #IMPLIED >
+<!ATTLIST gadget resizehorz 								CDATA #IMPLIED >
+<!ATTLIST gadget resizevert 								CDATA #IMPLIED >
+<!ATTLIST gadget rightcapart 								CDATA #IMPLIED >
+<!ATTLIST gadget rightcheck 								CDATA #IMPLIED >
+<!ATTLIST gadget rightjustify 								CDATA #IMPLIED >
+<!ATTLIST gadget scrollhoriz 								CDATA #IMPLIED >
+<!ATTLIST gadget scrollvert 								CDATA #IMPLIED >
+<!ATTLIST gadget selectedcolor 								CDATA #IMPLIED >
+<!ATTLIST gadget shownonidle 								CDATA #IMPLIED >
+<!ATTLIST gadget showselect									CDATA #IMPLIED >
+<!ATTLIST gadget showvalue 									CDATA #IMPLIED >
+<!ATTLIST gadget size1024 									CDATA #IMPLIED >
+<!ATTLIST gadget sizerel1024 								CDATA #IMPLIED >
+<!ATTLIST gadget sliderareaart 								CDATA #IMPLIED >
+<!ATTLIST gadget sliderbuttons 								CDATA #IMPLIED >
+<!ATTLIST gadget sliderdownbtnset 							CDATA #IMPLIED >
+<!ATTLIST gadget sliderpipart 								CDATA #IMPLIED >
+<!ATTLIST gadget sliderpiptexturecoords 					CDATA #IMPLIED >
+<!ATTLIST gadget sliderupbtnset 							CDATA #IMPLIED >
+<!ATTLIST gadget slidervertical 							CDATA #IMPLIED >
+<!ATTLIST gadget sound 										CDATA #IMPLIED >
+<!ATTLIST gadget statebuttondefaultstate 					CDATA #IMPLIED >
+<!ATTLIST gadget statebuttonuseinternalstates 				CDATA #IMPLIED >
+<!ATTLIST gadget sunkenbevel 								CDATA #IMPLIED >
+<!ATTLIST gadget text 										CDATA #IMPLIED >
+<!ATTLIST gadget textcenterhoriz 							CDATA #IMPLIED >
+<!ATTLIST gadget textcentervert 							CDATA #IMPLIED >
+<!ATTLIST gadget textcolor 									CDATA #IMPLIED >
+<!ATTLIST gadget textfont 									CDATA #IMPLIED >
+<!ATTLIST gadget textfontsize 								CDATA #IMPLIED >
+<!ATTLIST gadget textjustifyleft 							CDATA #IMPLIED >
+<!ATTLIST gadget textjustifyright 							CDATA #IMPLIED >
+<!ATTLIST gadget textmarkup 								CDATA #IMPLIED >
+<!ATTLIST gadget textscrollbar 								CDATA #IMPLIED >
+<!ATTLIST gadget textsimpleaddscrollstobottom 				CDATA #IMPLIED >
+<!ATTLIST gadget texturecoords 								CDATA #IMPLIED >
+<!ATTLIST gadget texturereplace 							CDATA #IMPLIED >
+<!ATTLIST gadget textwrapoff 								CDATA #IMPLIED >
+<!ATTLIST gadget textwrapon 								CDATA #IMPLIED >
+<!ATTLIST gadget tilebackground 							CDATA #IMPLIED >
+<!ATTLIST gadget tilebackgroundhoriz 						CDATA #IMPLIED >
+<!ATTLIST gadget tilebackgroundvert 						CDATA #IMPLIED >
+<!ATTLIST gadget timeout 									CDATA #IMPLIED >
+<!ATTLIST gadget titlebar 									CDATA #IMPLIED >
+<!ATTLIST gadget tooltiptext 								CDATA #IMPLIED >
+<!ATTLIST gadget topcapart 									CDATA #IMPLIED >
+<!ATTLIST gadget transparent 								CDATA #IMPLIED >
+<!ATTLIST gadget type 										( animationgadget
+															 | animationslider 
+															 | armyBanner 
+															 | button 
+															 | checkButton 
+															 | colorDropdown 
+															 | commandPanel 
+															 | dialog 
+															 | displayPanel 
+															 | editBox 
+															 | formatText 
+															 | gadget 
+															 | idleBanner 
+															 | list 
+															 | menu 
+															 | meshButton 
+															 | palette 
+															 | progressBar 
+															 | radioset 
+															 | scrollList 
+															 | simpleTextBox 
+															 | slider 
+															 | soundeditdialog 
+															 | soundgadget 
+															 | stateButton 
+															 | textBox 
+															 | textField 
+															 | timeline 
+															 | xsdebugger ) #REQUIRED > <!-- the type of this gadget -->
+<!ATTLIST gadget usebuttonset 								CDATA #IMPLIED >
+<!ATTLIST gadget usehyperlinks 								CDATA #IMPLIED >
+<!ATTLIST gadget usemask 									CDATA #IMPLIED >
+<!ATTLIST gadget verticalbuttons 							CDATA #IMPLIED >
+<!ATTLIST gadget windowzstyle 								CDATA #IMPLIED >
+<!ATTLIST gadget wordwrap 									CDATA #IMPLIED >
+<!ATTLIST gadget z 											CDATA #IMPLIED > <!-- the virtual depth of this gadget, this allows you to work in layers -->
+
+<!-- Define a horizontal scrollbar. -->
+<!ELEMENT horizscrollbar EMPTY >
+<!ATTLIST horizscrollbar background 				CDATA #IMPLIED > <!-- transparent border if no background file is provided -->
+<!ATTLIST horizscrollbar sliderareaart 				CDATA #IMPLIED > <!-- plain white background if no SliderAreaArt file is provided -->
+<!ATTLIST horizscrollbar sliderbuttons 				CDATA #IMPLIED > <!-- if declared, shows the left/right buttons -->
+<!ATTLIST horizscrollbar sliderleftbtnset 			CDATA #IMPLIED > <!-- only required when the sliderbuttons attribute is declared, typically "sliderLeftBtn" -->
+<!ATTLIST horizscrollbar sliderpipart 				CDATA #IMPLIED > <!-- transparent if no SliderPipArt is provided -->
+<!ATTLIST horizscrollbar sliderpiptexturecoords 	CDATA #IMPLIED > <!-- typically "0 0 1 1" -->
+<!ATTLIST horizscrollbar sliderrightbtnset 			CDATA #IMPLIED > <!-- only required when the sliderbuttons attribute is declared, typically "sliderRightBtn" -->
+
+<!-- Root element. Every layout document should start with 1 of these. -->
+<!ELEMENT layout ( gadget* , position?, gadget* ) >
+
+<!-- Define a listitem. This is typically encapsulated in a "scrollList" gadget. It's basically a fancy dropdownlist. -->
+<!ELEMENT listitem ( #PCDATA ) >
+
+<!-- Define the minimap position. -->
+<!ELEMENT position EMPTY >
+<!ATTLIST position name 	ID 		#REQUIRED >
+<!ATTLIST position size1024 CDATA 	#REQUIRED >
+
+<!-- Define 1 of the four states (default, clicked, rollover, ???) of a "stateButton" gadget. -->
+<!ELEMENT stateentry EMPTY >
+<!ATTLIST stateentry background 		CDATA #IMPLIED > <!-- you must define either a background image, -->
+<!ATTLIST stateentry backgroundcolor 	CDATA #IMPLIED > <!-- or a solid background color in RGB. -->
+
+<!-- Define a menu entry of a "menu" gadget. -->
+<!ELEMENT submenu ( #PCDATA | submenu )* >		  <!-- the #PCDATA mentioned here in a Console Command -->
+<!ATTLIST submenu accelerator 	CDATA #IMPLIED  > <!-- provide a hotkey for quick access to this feature -->
+<!ATTLIST submenu configindex 	CDATA #IMPLIED  > <!-- shortcut for Console Command: configToggle(configName) -->
+<!ATTLIST submenu disabled 		CDATA #IMPLIED  > <!-- if declared, this submenu option is not clickable -->
+<!ATTLIST submenu separator 	CDATA #IMPLIED  > <!-- if declared, this submenu acts as a separator -->
+<!ATTLIST submenu title 		CDATA #REQUIRED > <!-- define the submenu text -->
+
+<!-- Define a vertical scrollbar. -->
+<!ELEMENT vertscrollbar EMPTY >
+<!ATTLIST vertscrollbar background 				CDATA #IMPLIED  > <!-- transparent border if no background file is provided, typically "ui\ui background yellow opaque" -->
+<!ATTLIST vertscrollbar sliderareaart 			CDATA #IMPLIED  > <!-- plain white background if no SliderAreaArt file is provided -->
+<!ATTLIST vertscrollbar sliderbuttons 			CDATA #IMPLIED  > <!-- if declared, shows the up/down buttons -->
+<!ATTLIST vertscrollbar sliderdownbtnset 		CDATA #IMPLIED  > <!-- only required when the sliderbuttons attribute is declared, typically "sliderDownBtn" -->
+<!ATTLIST vertscrollbar sliderpipart 			CDATA #IMPLIED  > <!-- transparent if no SliderPiprt is provided -->
+<!ATTLIST vertscrollbar sliderpiptexturecoords 	CDATA #IMPLIED  > <!-- typically "0 0 1 1" -->
+<!ATTLIST vertscrollbar sliderupbtnset 			CDATA #IMPLIED  > <!-- only required when the sliderbuttons attribute is declared, typically "sliderUpBtn" -->
+<!ATTLIST vertscrollbar slidervertical 			CDATA #FIXED "" > <!-- will mess up significantly if you don't declare this -->
+<!--ATTLIST vertscrollbar texturereplace 		CDATA #IMPLIED--> <!-- only used once in Help Dialog, not sure if it has any use -->
