@@ -75,11 +75,13 @@ public class Connection {
 	
 	/**
 	 * Sets the connection type.
-	 * @param connectionType This command determines which players are connected. The valid values are: 
+	 * @param connectionType This command determines which players are connected. The valid values are:
+	 * <ul> 
 	 * <li>cConnectAreas: This is the default that is used if you don't call rmSetConnectionType. You have to specify each area to be connected by calling rmAddConnectionArea().</li> 
 	 * <li>cConnectPlayers: Connect all player areas.</li>
 	 * <li>cConnectAllies: Connect all ally player areas.</li> 
 	 * <li>cConnectEnemies: Connect enemy player areas.</li>
+	 * </ul>
 	 * 
 	 * @param connectAll Set this parameter to true if you want all of the areas to get connected to all of the other areas.
 	 * Set it to false to have the areas connected sequentially where the first area gets connected to the second area, 
@@ -87,7 +89,7 @@ public class Connection {
 	 * 
 	 * @param connectPercentage You can use this parameter to reduce the number of connections that are generated.
 	 * For example, if you set it to 0.5, then half of the connections will get generated. The ones that are generated are randomly chosen. 
-	 * Some ES maps with connections connect all players when player number is small (<6) and uses a connection percentage on larger maps, 
+	 * Some ES maps with connections connect all players when player number is small (less than 6) and uses a connection percentage on larger maps, 
 	 * otherwise so many connections can get placed that the barrier (like water or rock) is obscured.
 	 */ 
 	public native void rmSetConnectionType(int connectionID, int connectionType, bool connectAll, float connectPercentage);

@@ -6,13 +6,11 @@ package aom.scripting.xs.ai;
  * It's quite a primitive yet powerful system. However, certain proto flags tend to override this behavior.
  * </p>
  * 
- * <p>
- * The format is as follows:
+ * <p>The format is as follows:</p>
  * <pre>
  *  Type "Name of type" (this will be the name you use in proto)
  *  [A collection of flags from the list below, 1 per line.]
  * </pre>
- * </p>
  * 
  * @see <a href="{@docRoot}/resources/unitaitypes.txt">unitaitypes.txt file</a>.
  *  
@@ -20,37 +18,37 @@ package aom.scripting.xs.ai;
  */
 public enum UnitAITypes {
 	/**
-	 * If followed by a unit type: turns "can attack" ON for "Unit Type".<br />
+	 * If followed by a unit type: turns "can attack" ON for "Unit Type".<br>
 	 * Else: turns "can attack" ON for every type.
 	 */
 	Attack,
 	
 	/**
-	 * If followed by a unit type: turns "can attack" OFF for "Unit Type".<br />
+	 * If followed by a unit type: turns "can attack" OFF for "Unit Type".<br>
 	 * Else: turns "can attack" OFF for every type.
 	 */
 	NoAttack,    
 	
 	/**
-	 * If followed by a unit type: turns "auto attack" ON for "Unit Type".<br />
+	 * If followed by a unit type: turns "auto attack" ON for "Unit Type".<br>
 	 * Else: turns "auto attack" ON for every type.
 	 */
 	AutoAttack,       
 	
 	/**
-	 * If followed by a unit type: turns "auto attack" OFF for "Unit Type".<br />
+	 * If followed by a unit type: turns "auto attack" OFF for "Unit Type".<br>
 	 * Else: turns "auto attack" OFF for every type.
 	 */
 	NoAutoAttack,   
 	
 	/**
-	 * If followed by a unit type: turns "attack response" ON for "Unit Type".<br />
+	 * If followed by a unit type: turns "attack response" ON for "Unit Type".<br>
 	 * Else: turns "attack response" ON for every type.	
 	 */
 	RespondToAttack,        
 	
 	/**
-	 * If followed by a unit type: turns "attack response" OFF for "Unit Type".<br />
+	 * If followed by a unit type: turns "attack response" OFF for "Unit Type".<br>
 	 * Else: turns "attack response" OFF for every type.	
 	 */
 	NoRespondToAttack,

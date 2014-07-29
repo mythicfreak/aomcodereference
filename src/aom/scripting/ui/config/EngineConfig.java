@@ -350,7 +350,7 @@ public class EngineConfig {
 	public bool lowQualityTextures;
 	
 	/** 
-	 * Maximum MIPmap size (in pixels) that will be loaded. Disabled if <= 0.
+	 * Maximum MIPmap size (in pixels) that will be loaded. Disabled if less than or equal to 0.
 	 */
 	public int maxMipMapSize;
 	
@@ -502,7 +502,7 @@ public bool multiMon;
 	public bool noMipMap;
 	
 	/** 
-	 * Ignore realtime & always run updates.
+	 * Ignore realtime and always run updates.
 	 * @deprecated
 	 */
 	public bool runAsFastAsPossible;

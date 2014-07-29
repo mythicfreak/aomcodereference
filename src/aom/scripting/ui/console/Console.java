@@ -24,30 +24,29 @@ public abstract class Console {
 	 * Maps an input event to the given command, in the given context.
 	 * 
 	 * @param 	key 
-	 * 			<div><img src="{@docRoot}/resources/keys.png" alt="Keymap" title="AoM Key Map" /></div>
+	 * 			<div><img src="{@docRoot}/resources/keys.png" alt="Keymap"></div>
 	 * 
 	 * @param context 
 	 * 
-	 * <p>General contexts:
-	 * 	<tt><ul>
+	 * <p>General contexts:</p>
+	 * 	<ul>
 	 * 		<li>root</li>
-	 * 		<li>developer //needs +developer in user.cfg</li>
-	 * 		<li>aiDebug //needs +aiDebug in user.cfg</li>
+	 * 		<li>developer (needs +developer flag in user.cfg)</li>
+	 * 		<li>aiDebug (needs +aiDebug flag in user.cfg)</li>
 	 * 		<li>pregame</li>
-	 * 		<li>world //game + editor (basically everything with a map in it)</li>
+	 * 		<li>world (everything with a map in it, i.e. game + editor)</li>
 	 * 		<li>game</li>
 	 * 		<li>postgame</li>
 	 * 		<li>editor</li>
-	 * 		<li>strategicmap //the big map when you press tab in AoT</li>
+	 * 		<li>strategicmap (the big map when you press tab in AoT)</li>
 	 * 		<li>console</li>
 	 * 		<li>XSDebugger</li>
 	 * 		<li>arena //weird campaign menu</li>
 	 * 		<li>AILocSelect</li>
-	 * 	</ul></tt>
-	 * </p>
+	 * 	</ul>
 	 * 
-	 * <p>Building contexts:
-	 * <tt><ul>
+	 * <p>Building contexts:</p>
+	 * <ul>
 	 * 		<li>buildAccel</li>
 	 * 		<li>settlementAccel</li>
 	 * 		<li>dockAccel</li>
@@ -68,12 +67,10 @@ public abstract class Console {
 	 * 		<li>templeEgyptianAccel</li>
 	 * 		<li>templeNorseAccel</li>
 	 * 		<li>templeAtlanteanAccel</li>
-	 * </ul></tt>
-	 * </p>
+	 * </ul>
 	 * 
-	 * <p>
-	 * Gadgets: all gadget names can be used as context, but may only execute if the mapping is defined in the same file as the gadget (e.g. in uimain.xml).
-	 * <tt><ul>
+	 * <p>Gadgets: all gadget names can be used as context, but may only execute if the mapping is defined in the same file as the gadget (e.g. in uimain.xml).</p>
+	 * <ul>
 	 * 		<li>detailHelp</li>
 	 * 		<li>fakeTechTree</li>
 	 * 		<li>objectives</li>
@@ -81,8 +78,7 @@ public abstract class Console {
 	 * 		<li>tributeDialog</li>
 	 * 		<li>playerStatusDialog</li>
  	 * 		<li>mainGameMenu</li>
-	 * 	</ul></tt>
-	 * </p>
+	 * 	</ul>
 	 * 
 	 * <p>All Edit Modes</p>
 	 * 

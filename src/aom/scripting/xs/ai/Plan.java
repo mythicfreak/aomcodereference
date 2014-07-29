@@ -7,8 +7,8 @@ import aom.scripting.datatypes.vector;
 /**
  * This class provides a collection of AI commands concerning Plans.
  * 
- * @see <a href="{@docRoot}/AI Reference.xs">AoM Reference</a> or <a href="{@docRoot}/AI XReference.xs">AoT Reference</a>
- * for a complete list of all plan constants and more.>
+ * @see <a href="{@docRoot}/resources/ai_reference.xs">AoM Reference</a> or <a href="{@docRoot}/resources/ai2_reference.xs">AoT Reference</a>
+ * for a complete list of all plan constants and more.
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */

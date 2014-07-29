@@ -35,5 +35,4 @@ Which JavaDoc options do you use?
   - `-tag throws`
   - `-tag note:a:"Note" `
   - `-tag see`
-  - `-tag author:a:"Author"`
   - `-tag example:a:"Example"`

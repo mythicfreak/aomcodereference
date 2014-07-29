@@ -5419,7 +5419,7 @@ public class UnitType {
 	 * @see #LogicalTypeIdleHero LogicalTypeIdleHero
 	 * @see #LogicalTypeIdleMilitary LogicalTypeIdleMilitary
 	 * 
-	 * @note To ensure that these are actually idle, you should use {@link aom.scripting.ui.console#uiFindIdleType(string) uiFindIdleType}. 
+	 * @note To ensure that these are actually idle, you should use {@link aom.scripting.ui.console.Selection#uiFindIdleType(string) uiFindIdleType}.
 	 */
 	public int LogicalTypeIdleCivilian=911;
 
@@ -5663,7 +5663,7 @@ public class UnitType {
 	 * @see #LogicalTypeIdleCivilian LogicalTypeIdleCivilian
 	 * @see #LogicalTypeIdleHero LogicalTypeIdleHero
 	 * 
-	 * @note To ensure that these are actually idle, you should use {@link aom.scripting.ui.console#uiFindIdleType(string) uiFindIdleType}.
+	 * @note To ensure that these are actually idle, you should use {@link aom.scripting.ui.console.Selection#uiFindIdleType(string) uiFindIdleType}.
 	 */
 	public int LogicalTypeIdleMilitary=912;
 
@@ -6487,7 +6487,7 @@ public class UnitType {
 	 * @see #LogicalTypeIdleCivilian LogicalTypeIdleCivilian
 	 * @see #LogicalTypeIdleMilitary LogicalTypeIdleMilitary
 	 * 
-	 * @note To ensure that these are actually idle, you should use {@link aom.scripting.ui.console#uiFindIdleType(string) uiFindIdleType}.
+	 * @note To ensure that these are actually idle, you should use {@link aom.scripting.ui.console.Selection#uiFindIdleType(string) uiFindIdleType}.
 	 */
 	public int LogicalTypeIdleHero=915;
 

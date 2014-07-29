@@ -30,16 +30,16 @@ import aom.scripting.datatypes.*;
  * <li>Miscellaneous Functions</li>
  * </ul> 
  *  
- * @author Mythic_Freak & invent00r
+ * @author Mythic_Freak &amp; invent00r
  * @version 2.02 (for AoM)
  * 
- * <br /><br />Change log:<br />
- * v2.02: (14/02/2010) Minor bug fix in xsArraySet.<br />
- * v2.01: (05/09/2009) Minor bug fix in Math_atan.<br /> 
- * v2.00: (06/08/2008) Major update: lots of bug fixes, added array functionality and a trigger framework.<br /> 
- * v1.02: (22/05/2008) Took out xsRestoreContextPlayer() to avoid confusion, and added some more functions.<br />
- * v1.01: (17/05/2008) Added a few extra functions and generated API.<br />
- * v1.00: (16/05/2008) Initial release.<br /><br />
+ * <br><br>Change log:<br>
+ * v2.02: (14/02/2010) Minor bug fix in xsArraySet.<br>
+ * v2.01: (05/09/2009) Minor bug fix in Math_atan.<br> 
+ * v2.00: (06/08/2008) Major update: lots of bug fixes, added array functionality and a trigger framework.<br> 
+ * v1.02: (22/05/2008) Took out xsRestoreContextPlayer() to avoid confusion, and added some more functions.<br>
+ * v1.01: (17/05/2008) Added a few extra functions and generated API.<br>
+ * v1.00: (16/05/2008) Initial release.<br><br>
  */
 public abstract class TriggerLoader {
 	 /**
@@ -86,15 +86,18 @@ public abstract class TriggerLoader {
 	
 	/**
 	 * The culture ID, can be:
+	 * <ul>
 	 * <li>cCultureGreek</li>
 	 * <li>cCultureEgyptian</li>
 	 * <li>cCultureNorse</li>
 	 * <li>cCultureNature</li>
+	 * </ul>
 	 */
 	public static final int cMyCulture;
 	
 	/**
 	 * The civilisation ID, can be:
+	 * <ul>
 	 * <li>cCivZeus</li>
 	 * <li>cCivHades</li>
 	 * <li>cCivPoseidon</li>
@@ -109,6 +112,7 @@ public abstract class TriggerLoader {
 	 * <li>cCivEgyptian</li>
 	 * <li>cCivRandom</li>
 	 * <li>cCivNature</li>
+	 * </ul>
 	 */
 	public static final int cMyCiv;
 	
@@ -1553,7 +1557,7 @@ public abstract class TriggerLoader {
 	 * @param endPos the position to end
 	 * @return the new substring
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1566,7 +1570,7 @@ public abstract class TriggerLoader {
 	 * @param sText the input string
 	 * @return the length of the given string
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1581,7 +1585,7 @@ public abstract class TriggerLoader {
 	 * @param pos the position of the wanted char
 	 * @return the char at position (pos)
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1595,7 +1599,7 @@ public abstract class TriggerLoader {
 	 * @param sText the input string
 	 * @return The upper case string
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1609,7 +1613,7 @@ public abstract class TriggerLoader {
 	 * @param sText the input string
 	 * @return the lower case string
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1623,7 +1627,7 @@ public abstract class TriggerLoader {
 	 * @param sText the input string
 	 * @return the float that was parsed from the string
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1636,7 +1640,7 @@ public abstract class TriggerLoader {
 	 * @param a the input float
 	 * @return the string that was created from the float
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1647,11 +1651,11 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the rest after division of 2 numbers.
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a The input number.
+	 * @param b	The modulus.
 	 * @return a % b
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1664,12 +1668,12 @@ public abstract class TriggerLoader {
      * int value that is less than or equal to the
      * argument and is equal to a mathematical integer.
      * 
-	 * @param a
+	 * @param a	The input number.
 	 * @return Returns the largest (closest to positive infinity)
      * int value that is less than or equal to the
      * argument and is equal to a mathematical integer.
      * 
-     * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+     * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1682,12 +1686,12 @@ public abstract class TriggerLoader {
      * int value that is greater than or equal to the
      * argument and is equal to a mathematical integer.
      * 
-	 * @param a
+	 * @param a	The input number.
 	 * @return Returns the smallest (closest to negative infinity)
      * int value that is greater than or equal to the
      * argument and is equal to a mathematical integer.
      * 
-     * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+     * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1698,10 +1702,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Converts a radian into a degree.
 	 * 
-	 * @param radian
-	 * @return the degree
+	 * @param radian	The angle in radians.
+	 * @return The angle in degrees.
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1712,10 +1716,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Converts a degree into a radian.
 	 * 
-	 * @param degree
-	 * @return the radian
+	 * @param degree	The angle in degrees.
+	 * @return The angle in radians.
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1726,10 +1730,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Converts an int value into a bool.
 	 * 
-	 * @param a
+	 * @param a	The input value.
 	 * @return false if a is 0, true otherwise
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1740,10 +1744,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Converts a bool into an integer.
 	 * 
-	 * @param a
+	 * @param a	The input value.
 	 * @return 1 if a is true, 0 otherwise
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1754,10 +1758,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Converts an int to a float.
 	 * 
-	 * @param a
+	 * @param a	The input value.
 	 * @return the new float
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1768,10 +1772,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Converts a float into an int.
 	 *  
-	 * @param a
+	 * @param a	The input value.
 	 * @return the new int
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1783,11 +1787,11 @@ public abstract class TriggerLoader {
 	 * Returns the value of the first argument raised to the power of the
      * second argument. 
      * 
-	 * @param n
-	 * @param x
+	 * @param n	The base.
+	 * @param x	The exponent.
 	 * @return n^x
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1798,10 +1802,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the absolute value of the first argument.
 	 * 
-	 * @param a
-	 * @return a if a>=0; -a if a<0 
+	 * @param a	The input value.
+	 * @return {@literal a if a>=0; -a if a<0} 
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1812,12 +1816,12 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the factorial of the given param.
 	 * 
-	 * @param n
+	 * @param n	The input value.
 	 * @return n!
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
-	 * <DT><B>Author:</B><DD>Matei</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Matei</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1828,10 +1832,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the closest int near the given float.
 	 * 
-	 * @param a
+	 * @param a	The input value.
 	 * @return the closest int
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1846,7 +1850,7 @@ public abstract class TriggerLoader {
 	 * @param approx the required accuracy
 	 * @return the approximated value
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1857,11 +1861,11 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the greatest common divisor of 2 values.
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a	The first input value.
+	 * @param b	The second input value.
 	 * @return the greatest common divisor of a and b
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1871,11 +1875,11 @@ public abstract class TriggerLoader {
 	
 	/**
 	 * Returns the least common multiple of 2 values.
-	 * @param a
-	 * @param b
+	 * @param a	The first input value.
+	 * @param b	The second input value.
 	 * @return the least common multiple of a and b
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1890,7 +1894,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the arc tangent of n
 	 * 
-	 * <DT><B>Author:</B><DD>Matei</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Matei</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1913,7 +1917,7 @@ public abstract class TriggerLoader {
      *          (<i>x</i>,&nbsp;<i>y</i>) in Cartesian coordinates.
 
 	 * 
-	 * <DT><B>Author:</B><DD>Matei</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Matei</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1927,7 +1931,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the cosine of n
 	 * 
-	 * <DT><B>Author:</B><DD>Matei</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Matei</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1941,7 +1945,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the sine of n
 	 * 
-	 * <DT><B>Author:</B><DD>Matei</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Matei</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1955,7 +1959,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the tangent of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1969,7 +1973,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the cotangent of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1983,7 +1987,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the secant of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -1997,7 +2001,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radian
 	 * @return the cosecant of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2011,7 +2015,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the sine hyperbolic of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2025,7 +2029,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the cosine hyperbolic of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2039,7 +2043,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the tangent hyperbolic of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2053,7 +2057,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the cotangent hyperbolic of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2067,7 +2071,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the secant hyperbolic of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2081,7 +2085,7 @@ public abstract class TriggerLoader {
 	 * @param n angle in radians
 	 * @return the cosecant hyperbolic of n
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2092,10 +2096,10 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the square root of a given value.
 	 * 
-	 * @param s
+	 * @param s	The input value.
 	 * @return the square root of s
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2105,10 +2109,10 @@ public abstract class TriggerLoader {
 	
 	/**
 	 * Returns the cubic root of a given value
-	 * @param s
+	 * @param s	The input value.
 	 * @return the cubic root of s
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2125,7 +2129,7 @@ public abstract class TriggerLoader {
 	 * @return The first component of the result vector is the first solution.
 	 * The second component of the result vector is the second solution.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2136,11 +2140,11 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the highest of 2 params.
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a	The first input value.
+	 * @param b	The second input value.
 	 * @return the highest value out of a and b
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2151,11 +2155,11 @@ public abstract class TriggerLoader {
 	/**
 	 * Returns the lowest value of 2 params.
 	 * 
-	 * @param a
-	 * @param b
+	 * @param a	The first input value.
+	 * @param b	The second input value.
 	 * @return the lowest value out of a and b
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2165,11 +2169,11 @@ public abstract class TriggerLoader {
 	
 	/**
 	 * Returns the distance between 2 points in a 3D location.
-	 * @param a the 1st point
-	 * @param b the 2nd point
+	 * @param a the first point
+	 * @param b the second point
 	 * @return the distance d(a,b)
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2181,10 +2185,10 @@ public abstract class TriggerLoader {
 	 * Returns Euler's number <i>e</i> raised to the power of a
      * <code>float</code> value. 
      * 
-	 * @param a
+	 * @param a	The exponent.
 	 * @return e^a
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2199,7 +2203,7 @@ public abstract class TriggerLoader {
 	 * @param acc the wanted accuracy: higher accuracy(1000+) will slow down calculation
 	 * @return ln(a)
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2215,7 +2219,7 @@ public abstract class TriggerLoader {
 	 * @param acc the wanted accuracy: higher accuracy(1000+) will slow down calculation
 	 * @return log_base(resa)
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2230,7 +2234,7 @@ public abstract class TriggerLoader {
 	 * @param acc the wanted accuracy: higher accuracy(1000+) will slow down calculation
 	 * @return log2(resa)
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2245,7 +2249,7 @@ public abstract class TriggerLoader {
 	 * @param acc the wanted accuracy: higher accuracy(1000+) will slow down calculation
 	 * @return log10(resa)
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2261,7 +2265,7 @@ public abstract class TriggerLoader {
      * 
 	 * @return a random number in the [0,1] interval
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2275,9 +2279,9 @@ public abstract class TriggerLoader {
      * argument is less than zero.
      * 
 	 * @param a
-	 * @return -1 if a<0; 0 if a=0; 1 if a>0
+	 * @return {@literal -1 if a < 0; 0 if a = 0; 1 if a > 0}
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2293,7 +2297,7 @@ public abstract class TriggerLoader {
 	 * @param point the point to check
 	 * @return true if the point is in the rectangle, false otherwise.
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2309,7 +2313,7 @@ public abstract class TriggerLoader {
 	 * @param distance
 	 * @return
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2325,7 +2329,7 @@ public abstract class TriggerLoader {
 	 * @param y
 	 * @return
 	 * 
-	 * <DT><B>Author: </B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2339,7 +2343,7 @@ public abstract class TriggerLoader {
 	 * @param playerID the owner of the unit
 	 * @param unitName the scenario name of this unit
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2353,7 +2357,7 @@ public abstract class TriggerLoader {
 	 * @param playerID the owner of the unit
 	 * @param unitID the unit ID�
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */	
@@ -2373,7 +2377,7 @@ public abstract class TriggerLoader {
 	/**
 	 * Sets the lightning completely random.
 	 * 
-	 * <DT><B>Author:</B><DD>nottud</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>nottud</DD></DL> 
 	 * 
 	 * @since 1.01
 	 */
@@ -2386,7 +2390,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param type the unit type to select
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 1.01
 	 */
@@ -2399,7 +2403,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param type the unit type to select
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 1.01
 	 */
@@ -2415,7 +2419,7 @@ public abstract class TriggerLoader {
 	 * @param repeat turn autoqueue on or not?
 	 * @param playerID the player that should train the unit
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 1.01
 	 * 
@@ -2432,7 +2436,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @see #xsRestoreContextPlayer()
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -2445,7 +2449,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @see #xsSaveAndSetContextPlayer(int)
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -2458,7 +2462,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the game is played in multiplayer mode, else false.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -2475,7 +2479,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the default resource cost for a given unit.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -2490,7 +2494,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the owner ID of the unit
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2505,7 +2509,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the owner ID of the unit
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 1.00
 	 */
@@ -2516,7 +2520,7 @@ public abstract class TriggerLoader {
 	/**
 	 * Switches the current mode to editor mode.
 	 * 
-	 * <DT><B>Author:</B><DD>nottud</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>nottud</DD></DL> 
 	 * 
 	 * @since 1.01
 	 */
@@ -2527,7 +2531,7 @@ public abstract class TriggerLoader {
 	/**
 	 * Leaves the editor mode and returns to the actual game.
 	 * 
-	 * <DT><B>Author:</B><DD>nottud</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>nottud</DD></DL>
 	 * 
 	 *  @since 1.01
 	 */
@@ -2540,7 +2544,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param cmd the command to execute
 	 * 
-	 * <DT><B>Author:</B><DD>nottud</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>nottud</DD></DL>
 	 * 
 	 *  @since 1.01
 	 */
@@ -2557,7 +2561,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return returns the ID of the chosen unit.
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.01
 	 */
@@ -2579,7 +2583,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the query ID
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.01
 	 */
@@ -2592,7 +2596,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param text the text for output
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL>
 	 * 
 	 * @since 1.01
 	 */
@@ -2605,7 +2609,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the time string
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 1.02
 	 */
@@ -2618,7 +2622,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param filename the name of the file to store the camera position
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2631,7 +2635,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param filename the name of the file to retrieve the camera postion from
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2644,7 +2648,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to zoom at.
 	 * 
-	 * <DT><B>Author:</B><DD>nottud</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>nottud</DD></DL>
 	 * 
 	 * @since 1.02 
 	 * 
@@ -2660,7 +2664,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2674,7 +2678,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2688,7 +2692,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2702,7 +2706,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2716,7 +2720,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 2.00
 	 */
@@ -2730,7 +2734,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 2.00
 	 */
@@ -2744,7 +2748,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param point the point to click
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak</DD></DL>
 	 * 
 	 * @since 1.02
 	 */
@@ -2758,7 +2762,7 @@ public abstract class TriggerLoader {
 	 * @param QVname the QV name 
 	 * @param QVvalue the float value to assign
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2774,9 +2778,11 @@ public abstract class TriggerLoader {
 	 * 
 	 * @note uninitialized QVs start at -1.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
+	 * 
+	 * @return the float value assigned to this QV.
 	 * 
 	 */
 	public static float trQuestVarGet(string QVname) {
@@ -2791,7 +2797,7 @@ public abstract class TriggerLoader {
 	 * @param max the maximum bound
 	 * @param Round true if the values should be rounded to the closest integer value.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2805,7 +2811,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param QVname the QV name
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2820,7 +2826,7 @@ public abstract class TriggerLoader {
 	 * @param QVname the QV name of the source QV
 	 * @param QVname2 the QV name of the desiniation QV
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2835,7 +2841,7 @@ public abstract class TriggerLoader {
 	 * @param VQVname the vector QV name
 	 * @param QVv the vector to assign
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2853,7 +2859,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @note uninitialized QVs start at (-1,-1,-1).
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2869,7 +2875,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the X component of VQVname 
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00 
 	 * 
@@ -2885,7 +2891,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the Y component of VQVname 
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2901,7 +2907,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the Z component of VQVname 
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2915,7 +2921,7 @@ public abstract class TriggerLoader {
 	 *  
 	 * @param VQVname the vector QV to echo
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2930,7 +2936,7 @@ public abstract class TriggerLoader {
 	 * @param SQVname the string QV name
 	 * @param SQVvalue the value to be assigned
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD>
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL>
 	 * 
 	 * @since 1.00
 	 */
@@ -2945,7 +2951,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the string assigned to SQVname
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2959,7 +2965,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param SQVname the string QV to echo
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 1.00
 	 * 
@@ -2973,7 +2979,9 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param QVAname the army QV
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * @param army
+	 * 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -2988,7 +2996,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the value assigned to the army QV
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3003,7 +3011,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the army ID of the army QV.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r & Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r &amp; Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3018,7 +3026,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the player ID of the army QV.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3031,7 +3039,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param QVAname the army QV
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r & Mythic_Freak</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r &amp; Mythic_Freak</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3046,7 +3054,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the array ID.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3061,7 +3069,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return a vector containing the 2 size values.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3076,7 +3084,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the X-size of the array.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3091,7 +3099,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the Y-size of the array.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3106,7 +3114,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return a vector containing the 2 size values.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3121,7 +3129,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the X-size of the array.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3136,7 +3144,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the Y-size of the array.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3152,7 +3160,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3167,7 +3175,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the default value.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3185,7 +3193,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3203,7 +3211,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3220,7 +3228,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3236,7 +3244,7 @@ public abstract class TriggerLoader {
 	 * @param replaceVal if this value is set, only those values will be overwritten in the array. 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3253,7 +3261,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3271,7 +3279,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the array ID.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3288,7 +3296,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the value found at ArrayName[posX][posY]. 
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3305,7 +3313,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the value found at Aid[posX][posY]. 
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3320,7 +3328,7 @@ public abstract class TriggerLoader {
 	 * @param posX the X-position
 	 * @param posY the Y-position
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3333,7 +3341,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param AName the name of the array
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3347,7 +3355,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param AName the name of the array
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3363,7 +3371,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if all values match, otherwise false.
 	 * 
-	 * <DT><B>Author:</B><DD>Mythic_Freak & invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>Mythic_Freak &amp; invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3379,7 +3387,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3395,7 +3403,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3408,11 +3416,11 @@ public abstract class TriggerLoader {
 	 * 
 	 * @param Aid the array ID
 	 * @param posY the row to sort
-	 * @param Descending the compare operator (> or <)
+	 * @param Descending the compare operator
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */	
@@ -3429,7 +3437,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return the X-position of the found element, or -1 in case the value was not present.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */
@@ -3445,7 +3453,7 @@ public abstract class TriggerLoader {
 	 * 
 	 * @return true if the operation was successful.
 	 * 
-	 * <DT><B>Author:</B><DD>invent00r</DD> 
+	 * <DL><DT><B>Author:</B></DT><DD>invent00r</DD></DL> 
 	 * 
 	 * @since 2.00
 	 */	

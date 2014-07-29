@@ -3,8 +3,8 @@ package aom.scripting.xs.rm;
  * This is an enumeration of all ProtoUnits available in AoT.
  * For the correct spelling please refer to the documentation rather than the variables.
  * 
- * @see <a href="{@docRoot}/AI Reference.xs">AoM Reference</a>
- * @see <a href="{@docRoot}/AI XReference.xs">AoT Reference</a>
+ * @see <a href="{@docRoot}/resources/ai_reference.xs">AoM Reference</a>
+ * @see <a href="{@docRoot}/resources/ai2_reference.xs">AoT Reference</a>
  *
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */

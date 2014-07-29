@@ -1,5 +1,7 @@
 package aom.scripting.anim;
 
+import aom.scripting.datatypes.string;
+
 /**
  * This enum lists all possible logics that can be used in an anim script.
  * 
@@ -51,7 +53,7 @@ package aom.scripting.anim;
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */
-public enum Logic {
+public interface Logic {
 	/**
 	 * Checks whether this unit is worked on.
 	 * 
@@ -60,7 +62,7 @@ public enum Logic {
 	 *
 	 * @example A buoy is added to fish being gathered from.
 	 */
-	WorkedOnLogic,
+	public void WorkedOnLogic();
 	
 	/**
 	 * Checks whether this unit contains another unit.
@@ -68,9 +70,9 @@ public enum Logic {
 	 * First section: nothing contained.
 	 * Second section: something (e.g. relic) contained.
 	 */
-	ContainLogic,
+	public void ContainLogic();
 	
-	LastItemLogic,
+	public void LastItemLogic();
 	
 	/** 
 	 * Checks whether this unit is being empowered by another unit.
@@ -78,14 +80,14 @@ public enum Logic {
 	 * First section: not empowered.
 	 * Second section: empowered.
 	 */
-	EmpowerLogic,
+	public void EmpowerLogic();
 	
 	/**
 	 * Possible checks whether a specific God Power has been used yet.
 	 */
-	UsedLogic,
+	public void UsedLogic();
 	
-	ItemLogic,
+	public void ItemLogic();
 	
 	/** 
 	 * Checks whether this unit carries a specific resource.
@@ -103,7 +105,7 @@ public enum Logic {
 	 * 
 	 * @see #InventoryLogic
 	 */
-	CarryTypeLogic,
+	public void CarryTypeLogic(string carry_1, string carry_2, string carry_3, string carry_4, string carry_n);
 	
 	/** 
 	 * Checks whether the game is in cinematic mode.
@@ -111,12 +113,12 @@ public enum Logic {
 	 * First section: not in cinematic mode.
 	 * Second section: in cinematic mode.
 	 */
-	CinematicLogic,
+	public void CinematicLogic();
 	
 	/**
 	 * Possible checks whether a specific God Power is still available.
 	 */ 
-	PowerLogic,
+	public void PowerLogic();
 	
 	/**
 	 * Checks whether this unit (e.g. gold mine) has left only a specific percentage of the initial resources.
@@ -127,7 +129,7 @@ public enum Logic {
 	 * @param int_2 (e.g. 50)
 	 * @param int_n (e.g. 25)
 	 */
-	ResourceLogic,
+	public void ResourceLogic(int int_1, int int_2, int int_n);
 	
 	/**
 	 * Checks whether this unit has an amount of resource in its inventory.
@@ -137,13 +139,13 @@ public enum Logic {
 	 * When checking whether a unit is holding something (e.g. relic, resources), the parameters are: <code>0 1</code>.
 	 * When checking how much a herdable has fattened, possible parameters are (for example): <code>25 75</code>.
 	 */
-	InventoryLogic,
+	public void InventoryLogic();
 	
 	/**
 	 * Checks whether this unit has suffered (more than) a specific percentage of damage.
 	 * Possible parameters are: <code>0 25 100</code>.
 	 */
-	DamageLogic,
+	public void DamageLogic();
 	
 	/** 
 	 * Checks whether the game is in editor mode.
@@ -151,7 +153,7 @@ public enum Logic {
 	 * First section: not in editor mode.
 	 * Second section: in editor mode.
 	 */
-	EditorModeLogic,
+	public void EditorModeLogic();
 	
 	/**
 	 * Checks whether this unit should use sprites.
@@ -159,7 +161,7 @@ public enum Logic {
 	 * First section: should not use sprites.
 	 * Second section: should use sprites.
 	 */
-	SpriteLogic,
+	public void SpriteLogic();
 	
 	/**
 	 * Checks whether this unit is frozen.
@@ -167,7 +169,7 @@ public enum Logic {
 	 * First section: unit is not frozen.
 	 * Second section: unit is frozen.
 	 */
-	FrozenLogic,
+	public void FrozenLogic();
 	
 	
 	/** Checks whether this unit is owned by a specific civilization.
@@ -180,7 +182,7 @@ public enum Logic {
 	 * 
 	 * @example <code>civilizationLogic none/set</code> determines whether this unit is under Set's control.
 	 */
-	CivilizationLogic,
+	public void CivilizationLogic(string civ_1, string civ_2, string civ_n);
 	
 	/**
 	 * Checks whether a specific technology has been researched yet.
@@ -191,10 +193,10 @@ public enum Logic {
 	 * @param tech_2 (e.g. plow)
 	 * @param tech_n More than two technologies can be provided.
 	 */
-	TechLogic,
+	public void TechLogic(string tech_1, string tech_2, string tech_n);
 	
 	/**
-	 * Checks whether this unit is being upgraded to the next stage (i.e. Settlement -> Town Center).
+	 * Checks whether this unit is being upgraded to the next stage (i.e. Settlement to Town Center).
 	 * Parameters are separated by spaces.
 	 * Each section corresponds to 1 of the parameters respectively, in the order they are provided.
 	 * 
@@ -202,7 +204,7 @@ public enum Logic {
 	 * @param int_2 (e.g. 25)
 	 * @param int_n (e.g. 100)
 	 */
-	UpgradeLogic,
+	public void UpgradeLogic(int int_1, int int_2, int int_n);
 	
 	/**
 	 * Checks whether this unit has earned a specific percentage of experience.
@@ -213,7 +215,7 @@ public enum Logic {
 	 * @param int_2 (e.g. 25)
 	 * @param int_n (e.g. 100)
 	 */
-	ExperienceLogic,
+	public void ExperienceLogic(int int_1, int int_2, int int_n);
 	
 	/**
 	 * Checks whether this unit is in an specific percentage of construction.
@@ -224,25 +226,25 @@ public enum Logic {
 	 * @param int_2 (e.g. 25)
 	 * @param int_n (e.g. 100)
 	 */
-	ConstructionLogic,
+	public void ConstructionLogic(int int_1, int int_2, int int_n);
 	
 	/**
 	 * Checks whether the player has advanced to a specific age yet.
 	 */
-	AgeLogic,
+	public void AgeLogic();
 	
 	/**
 	 * Checks whether this unit is targeting a specific unit type.
 	 * Parameters are separated by slashes.
 	 * Each section corresponds to 1 of the parameters respectively, in the order they are provided.
 	 * 
-	 * @param unitttype_1 (e.g. none)
-	 * @param unitttype_2 (e.g. abstractTitan)
-	 * @param unitttype_n More than two unit types can be provided.
+	 * @param unittype_1 (e.g. none)
+	 * @param unittype_2 (e.g. abstractTitan)
+	 * @param unittype_n More than two unit types can be provided.
 	 * 
 	 * @example Titans attack other Titans in a different fashion compared to regular units.
 	 */
-	TargetLogic,
+	public void TargetLogic(string unittype_1, string unittype_2, string unittype_n);
 	
 	/**
 	 * Checks whether this unit is using one of its variations.
@@ -251,7 +253,7 @@ public enum Logic {
 	 * 
 	 * @example Male and Female Villagers look differently.
 	 */
-	VariationLogic,
+	public void VariationLogic();
 	
 	/**
 	 * Checks whether this unit is owned by a specific culture.
@@ -263,5 +265,5 @@ public enum Logic {
 	 * @param culture_3 (e.g. Norse)
 	 * @param culture_4 (e.g. Atlantean)
 	 */
-	CultureLogic;
+	public void CultureLogic(string culture_1, string culture_2, string culture_3, string culture_4);
 }

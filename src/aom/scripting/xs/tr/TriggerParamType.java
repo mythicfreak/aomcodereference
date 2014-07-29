@@ -76,7 +76,6 @@ public enum TriggerParamType {
 	/**
 	 * A drop down list of operators.
 	 * Two sets are available:
-	 * <code>
 	 * <ul>
 	 * <li>&gt;</li>
 	 * <li>&gt;=</li>
@@ -91,7 +90,6 @@ public enum TriggerParamType {
 	 * <li>*</li>
 	 * <li>/</li>
 	 * </ul>
-	 * </code>
 	 * The choice of set is decided by the default value you enter.
 	 */
 	OPERATOR,
@@ -104,7 +102,7 @@ public enum TriggerParamType {
 	
 	/**
 	* A drop down list of technologies.
-	* @see <a href="{@docRoot}/AI XReference.xs">Technology Constants in AI Reference.</a>
+	* @see <a href="{@docRoot}/resources/ai2_reference.xs">Technology Constants in AI Reference.</a>
 	* 
 	* @example {@code 123}
 	*/
@@ -174,7 +172,7 @@ public enum TriggerParamType {
 	/**
 	* A drop down list of possible technology statuses.
 	* 
-	* @see <a href="{@docRoot}/AI XReference.xs">Technology Status Constants in AI Reference.</a>
+	* @see <a href="{@docRoot}/resources/ai2_reference.xs">Technology Status Constants in AI Reference.</a>
 	* 
 	* @example {@code 1}
 	*/

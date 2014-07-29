@@ -8,10 +8,10 @@ package aom.scripting.eso;
  * Note that this is just an abstraction, the Account Service is SOAP-based and thus works with XML in- and output.
  * 
  * The actual location of the Account Service for AoM, respectively AoT is:
- * <tt><ul>
+ * <ul>
  *    <li>http://auth1.aom.eso.com/Webservices/AccountService.asmx</li>
  *    <li>http://auth1.aom.eso.com/AomXServices/AccountService.asmx</li>
- * </ul></tt>
+ * </ul>
  * Note that you can't contact them directly through your browser, but they are certainly there!
  * Unfortunately this means we can't retrieve the WSDL either, so programming a client must be done manually.
  * 

@@ -71,13 +71,12 @@ public abstract class Triggers {
 	public native void trEndGame();
 
 	/** 
-	 * Cause an event to occur.
-	 * 
-	 * <p>
-	 * Under the hood, an eventID is generated for this event.
-	 * This event is registered in the default event handler using
-	 * {@link #trEventSetHandler(int, string) trEventSetHandler(myEventID, "eventHandler");}.
-	 * Next, this piece of code is appended at the end of the eventHandler function:
+Cause an event to occur.
+
+Under the hood, an eventID is generated for this event.
+This event is registered in the default event handler using
+{@link #trEventSetHandler(int, string) trEventSetHandler(myEventID, "eventHandler");}.
+Next, this piece of code is appended at the end of the eventHandler function:
 <pre>
 case myEventID:
 {
@@ -86,7 +85,6 @@ case myEventID:
    break;
 }
 </pre>
-	 * </p>
 	 */
 	public native void trEventFire(int eventID);
 

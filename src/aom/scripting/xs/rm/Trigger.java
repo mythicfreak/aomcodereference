@@ -9,9 +9,9 @@ import aom.scripting.datatypes.string;
  * <p>
  * Basically only the default triggers can be used in RM scripts, because of the way they are inserted.
  * With a couple of workarounds you can inject raw trigger code in a RM script though.
- * You can use the following functions:
+ * You can use the following functions:</p>
  * 
- * <pre>
+ * <pre>{@code 
 void rmInsertConditionCode(string xs="") {
 	rmAddTriggerCondition("Timer");
 	rmSetTriggerConditionParam("Param1","0==("+xs+"));//");
@@ -21,13 +21,12 @@ void rmInsertEffectCode(string xs="") {
 	rmAddTriggerEffect("SetIdleProcessing");
 	rmSetTriggerEffectParam("IdleProc", "true); "+xs+" //");
 }
- * </pre>
- * </p>
+ * }</pre>
  * 
  * @example
  * <pre>
-rmInsertConditionCode("(trTime() <= 5.0)");
-rmInsertEffectCode("trSetFogAndBlackmap(false, false);");
+{@code rmInsertConditionCode("(trTime() <= 5.0)");}
+{@code rmInsertEffectCode("trSetFogAndBlackmap(false, false);");}
  * </pre>
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com

@@ -6,7 +6,7 @@ import aom.scripting.datatypes.string;
  * This class provides a collection of Console commands concerning Game Modes (not to be confused with edit modes).
  * An (incomplete?) list of modes and submodes:
  * <ul>
-	<li>Simulation</li>
+	<li>Simulation
 		<ul>
 			<li>SinglePlayer</li>
 			<li>GameMenu</li>
@@ -19,22 +19,26 @@ import aom.scripting.datatypes.string;
 			<li>HotKeySetup</li>
 			<li>Options</li>
 		</ul>
-	<li>PreGame / PreGameUI</li>
+	</li>
+	<li>PreGame / PreGameUI
 		<ul>
 			<li>HotKeySetup</li>
 			<li>Options</li>
+			<li>ModManager (Steam Workshop in AoM:EE</li>
 		</ul>
+	</li>
 	<li>Campaign</li>
 	<li>Arena</li>
 	<li>SinglePlayerSetup</li>
 	<li>ProfileSelect</li>
-	<li>MPSession</li>
+	<li>MPSession
 		<ul>
 			<li>Menu</li>
 			<li>QuickTeam</li>
 			<li>Broadcast</li>
 			<li>Receive</li>
 		</ul>
+	</li>
 	<li>RM Setup</li>
 	</ul>
  * 

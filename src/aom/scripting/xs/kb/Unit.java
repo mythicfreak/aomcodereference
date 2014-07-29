@@ -7,8 +7,8 @@ import aom.scripting.datatypes.vector;
 /**
  * This class provides a collection of KB commands concerning Units and Protounits.
  * 
- * @see <a href="{@docRoot}/AI Reference.xs">AoM Reference</a> or  <a href="{@docRoot}/AI XReference.xs">AoT Reference</a>
- * for a complete list of all unit constants and more.>
+ * @see <a href="{@docRoot}/resources/ai_reference.xs">AoM Reference</a> or  <a href="{@docRoot}/resoucrs/ai2_reference.xs">AoT Reference</a>
+ * for a complete list of all unit constants and more.
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */

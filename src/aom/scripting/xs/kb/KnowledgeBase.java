@@ -7,8 +7,8 @@ import aom.scripting.datatypes.*;
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  * 
- * @see <a href="{@docRoot}/AI Reference.xs">AoM Reference</a>
- * @see <a href="{@docRoot}/AI XReference.xs">AoT Reference</a>
+ * @see <a href="{@docRoot}/resources/ai_reference.xs">AoM Reference</a>
+ * @see <a href="{@docRoot}/resources/ai2_reference.xs">AoT Reference</a>
  */
 public abstract class KnowledgeBase {
 	/** 

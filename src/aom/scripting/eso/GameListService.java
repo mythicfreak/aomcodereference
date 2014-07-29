@@ -5,10 +5,10 @@ package aom.scripting.eso;
  * Note that this is just an abstraction, the GameList Service is SOAP-based and thus works with XML in- and output.
  * 
  * The actual location of the GameList Service for AoM, respectively AoT is:
- * <tt><ul>
+ * <ul>
  *    <li>http://games1.aom.eso.com/WebServices/GameListService.asmx</li>
  *    <li>http://games1.aom.eso.com/AomXServices/GameListService.asmx</li>
- * </ul></tt>
+ * </ul>
  * Note that you can't contact them directly through your browser, but they are certainly there!
  * Unfortunately this means we can't retrieve the WSDL either, so programming a client must be done manually.
  * 

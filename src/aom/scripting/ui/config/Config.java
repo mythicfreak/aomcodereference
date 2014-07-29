@@ -19,6 +19,7 @@ import aom.scripting.datatypes.string;
  * 
  * <p>
  * <b>Using configs</b>
+ * </p>
  * <ul>
  * <li>Enabling a boolean config: use <code>{@link #configDef(string)}</code> or <code>+configName</code> in a .cfg file.</li>
  * <li>Disabling a boolean config: use <code>{@link #configUndef(string)}</code> or <code>-configName</code> in a .cfg file.</li>
@@ -30,7 +31,6 @@ import aom.scripting.datatypes.string;
  * 		or <code>configName newValue</code> in a .cfg file.
  * </li>
  * </ul>
- * </p>
  * 
  * @note <p>Enabling is the default action when a boolean config is found without a sign.</p>
  * @note <p>Quotes around strings are not required if that string does not contain spaces.</p>

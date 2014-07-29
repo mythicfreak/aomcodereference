@@ -10,7 +10,7 @@ package aom.scripting.eso;
  * 
  * @note There are two different services for AoM and AoT respectively, although they look almost identical.
  * 
- * <p>Typical login sequence:
+ * <p>Typical login sequence:</p>
  * <ol>
  *    <li>Check for <a href="http://aom.zone.com/updatelist_xpack.xml">updates</a></li>
  *    <li>Get <a href="http://configx.aom.eso.com/ConfigUSXpack.aspx">config file</a></li>
@@ -29,7 +29,6 @@ package aom.scripting.eso;
  *    <li>Get <a href="http://config2.aom.eso.com/motdXPack.aspx">message of the day</a></li>
  *    <li>ZoneAccessService.GetServiceTicket (Stats)</li>
  * </ol>
- * </p>
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */

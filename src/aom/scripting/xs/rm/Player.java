@@ -11,10 +11,12 @@ public class Player {
 	/**
 	 * Adds to a player's resource amount.
 	 * @param resourceName 
+	 * <ul>
 	 * <li>"food"</li>
 	 * <li>"wood"</li>
 	 * <li>"gold"</li>
 	 * <li>"favor"</li>
+	 * </ul>
 	 */  
 	public native void rmAddPlayerResource(int playerID, string resourceName, float amount);
 	
@@ -129,10 +131,12 @@ public class Player {
 	/**
 	 * Sets a player's resource amount.
 	 * @param resourceName 
+	 * <ul>
 	 * <li>"food"</li>
 	 * <li>"wood"</li>
 	 * <li>"gold"</li>
 	 * <li>"favor"</li>
+	 * </ul>
 	 */  
 	public native void rmSetPlayerResource(int playerID, string resourceName, float amount);
 	
@@ -150,10 +154,12 @@ public class Player {
 	/**
 	 * Multiplies a player's resource amount by the given factor.
 	 * @param resourceName 
+	 * <ul>
 	 * <li>"food"</li>
 	 * <li>"wood"</li>
 	 * <li>"gold"</li>
 	 * <li>"favor"</li>
+	 * </ul>
 	 */  
 	public native void rmMultiplyPlayerResource(int playerID, string resourceName, float factor);
 	

@@ -187,21 +187,26 @@ AbstractVillager:
 	/** 
 	 * Current market buy rates
 	 * @param resourceType
+	 * <ul>
 	 * <li>food</li>
 	 * <li>wood</li>
+	 * </ul>
 	 */
 	public native int marketBuy(string resourceType);
 	/** 
 	 * Current market sell rates
 	 * @param resourceType
+	 * <ul>
 	 * <li>food</li>
 	 * <li>wood</li>
+	 * </ul>
 	 */
 	public native int marketSell(string resourceType);
 	/**
-	 * max amount of resource 
-	 * @param resourceType
-	 * <li>favor => 100 or 200</li> */
+	 * Maximum amount of a resource, used to display total availble favor (100 or 200). 
+	 * 
+	 * @param resourceType the type of resource, i.e. favor.
+	 */
 	public native int maxResource(string resourceType);
 	/** The number of villagers currently working on the given resource type. */
 	public native int numGatherers(string resourceType);
@@ -242,10 +247,12 @@ AbstractVillager:
 	/**
 	 * The current amount of resources of the current player.
 	 * @param resourceType
+	 * <ul>
 	 * <li>food</li>
 	 * <li>wood</li>
 	 * <li>gold</li>
 	 * <li>favor</li>
+	 * </ul>
 	 */
 	public native int resource(string resourceType);
 	/** The string version of a given technology ID. */

@@ -7,10 +7,10 @@ import org.w3c.dom.Document;
  * Note that this is just an abstraction, the stat server works with XML in- and output to accomplish these tasks.
  * 
  * The actual location of the stat server for AoM, respectively AoT is:
- * <tt><ul>
+ * <ul>
  *    <li>http://stats2.aom.eso.com/AOM_RC0/query/query.aspx?&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;clr&gt;&lt;cmd v='query'/&gt;&lt;co g='AOM_RC0' s='100' /&gt;&lt;myQueryXml /&gt;&lt;/clr&gt;</li>
  *    <li>http://stats2.aom.eso.com/AOM_XPACK/query/query.aspx?&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;clr&gt;&lt;cmd v='query'/&gt;&lt;co g='AOM_XPACK' s='100' /&gt;&lt;myQueryXml /&gt;&lt;/clr&gt;</li>
- * </ul></tt>
+ * </ul>
  * 
  * Query specific XML should be inserted where the &lt;myQueryXml /&gt; template is shown. 
  * 
@@ -32,6 +32,8 @@ public interface StatsService {
 	 * 			These IDs can be found in getGames() queries.
 	 * 
 	 * @example	&lt;qgs gi="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;
+	 * 
+	 * @return Game details.
 	 */
 	public Document qgs(String id, String gi);
 	
@@ -57,13 +59,15 @@ public interface StatsService {
 	 * 
 	 * @param 	fe
 	 * 			The First Index: this is sort of an offset to enable retrieving paginated results.
-	 * 			Defaults to 0. 0 <= fe <= 1000
+	 * 			Defaults to 0. Ranges from 0 to 1000.
 	 * 
 	 * @param 	me
 	 * 			The Max number of Entries - starting from the First Index - to be retrieved.
-	 * 			Defaults to 1000. 0 <= me <= 1000
+	 * 			Defaults to 1000. Ranges from 0 to 1000.
 	 * 
 	 * @example	<a href="http://stats2.aom.eso.com/AOM_XPACK/query/query.aspx?%3C?xml%20version='1.0'%20encoding='utf-16'?%3E%3Cclr%3E%3Cco%20g='AOM_XPACK'%20s='100'%20/%3E%3Cqsg%20/%3E%3C/clr%3E">&lt;qsg /&gt;</a>
+	 * 
+	 * @return Recent games.
 	 */
 	public Document qsg(String id, String en, EntityType et, GameMode md, int fe, int me);
 	
@@ -92,6 +96,8 @@ public interface StatsService {
 	 * 			Optional. Unknown integer.
 	 * 
 	 * @example	<a href="http://stats2.aom.eso.com/AOM_XPACK/query/query.aspx?%3C?xml%20version='1.0'%20encoding='utf-16'?%3E%3Cclr%3E%3Cco%20g='AOM_XPACK'%20s='100'%20/%3E%3Cqest%20et='ZS_Human'%20md='ZS_Supremacy'%20tp='ZS_AllTime'%20/%3E%3C/clr%3E">&lt;qest et="ZS_Human" md="ZS_Supremacy" tp="ZS_AllTime" /&gt;</a>
+	 * 
+	 * @return Player info.
 	 */
 	public Document qest(String id, String en, EntityType et, GameMode md, TimePeriod tp, int si);
 	
@@ -121,16 +127,18 @@ public interface StatsService {
 	 * 
 	 * @param 	np
 	 * 			Required. Number of Previous players - just above the specified player - to retrieve.
-	 * 			0 <= np <= 1000
+	 * 			Ranges from 0 to 1000.
 	 * 
 	 * @param 	nn
 	 * 			Required. Number of Next players - just under the specified player - to retrieve.
-	 * 			0 <= nn <= 1000
+	 * 			Ranges from 0 to 1000.
 	 * 
 	 * @param 	rn
 	 * 			Required. The Ranktable Name to retrieve the ranks from.
 	 * 
 	 * @example	<a href="http://stats2.aom.eso.com/AOM_XPACK/query/query.aspx?%3C?xml%20version='1.0'%20encoding='utf-16'?%3E%3Cclr%3E%3Cco%20g='AOM_XPACK'%20s='100'%20/%3E%3Cqer%20et='ZS_Human'%20md='ZS_Supremacy'%20tp='ZS_AllTime'%20np='0'%20nn='20'%20rn='ZS_TopPlayers'%20/%3E%3C/clr%3E">&lt;qer et="ZS_Human" md="ZS_Supremacy" tp="ZS_AllTime" np="0" nn="20" rn="ZS_TopPlayers" /&gt;</a>
+	 * 
+	 * @return Player rank.
 	 */
 	public Document qer(String id, String en, EntityType et, GameMode md, TimePeriod tp, int si, int np, int nn, RanktableName rn);
 	
@@ -150,13 +158,15 @@ public interface StatsService {
 	 * 
 	 * @param 	fe
 	 * 			The First Index: this is sort of an offset to enable retrieving paginated results.
-	 * 			Defaults to 0. 0 <= fe <= 1000
+	 * 			Defaults to 0. Ranges from 0 to 1000.
 	 * 
 	 * @param 	me
 	 * 			The Max number of Entries - starting from the First Index - to be retrieved.
-	 * 			Defaults to 1000. 0 <= me <= 1000
+	 * 			Defaults to 1000. Ranges from 0 to 1000.
 	 * 
 	 * @example	<a href="http://stats2.aom.eso.com/AOM_XPACK/query/query.aspx?%3C?xml%20version='1.0'%20encoding='utf-16'?%3E%3Cclr%3E%3Cco%20g='AOM_XPACK'%20s='100'%20/%3E%3Cqse%20en='DoD_'%20et='ZS_Human'%20/%3E%3C/clr%3E">&lt;qse en="DoD_" et="ZS_Human" /&gt;</a>
+	 * 
+	 * @return Player search results. 
 	 */
 	public Document qse(String id, String en, EntityType et, int fe, int me);
 	
@@ -183,16 +193,18 @@ public interface StatsService {
 	 * 
 	 * @param 	fe
 	 * 			The First Index: this is sort of an offset to enable retrieving paginated results.
-	 * 			Defaults to 0. 0 <= fe <= 1000
+	 * 			Defaults to 0. Ranges from 0 to 1000.
 	 * 
 	 * @param 	me
 	 * 			The Max number of Entries - starting from the First Index - to be retrieved.
-	 * 			Defaults to 1000. 0 <= me <= 1000
+	 * 			Defaults to 1000. Ranges from 0 to 1000.
 	 * 
 	 * @param 	dg
 	 * 			Required. The Data Group to which the returned units should belong.
 	 * 
 	 * @example	<a href="http://stats2.aom.eso.com/AOM_XPACK/query/query.aspx?%3C?xml%20version='1.0'%20encoding='utf-16'?%3E%3Cclr%3E%3Cco%20g='AOM_XPACK'%20s='100'%20/%3E%3Cqed%20et='ZS_Human'%20md='ZS_Supremacy'%20tp='ZS_AllTime'%20dg='ZS_MyU'%20/%3E%3C/clr%3E">&lt;qed et="ZS_Human" md="ZS_Supremacy" tp="ZS_AllTime" dg="ZS_MyU" /&gt;</a>
+	 * 
+	 * @return Player's units.
 	 */
 	public Document qed(String id, String en, EntityType et, GameMode md, TimePeriod tp, int fe, int me, DataGroup dg);
 }

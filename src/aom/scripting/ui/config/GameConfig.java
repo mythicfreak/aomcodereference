@@ -452,7 +452,7 @@ public class GameConfig {
 	public float unbuildFactor;
 
 	/** 
-	 * Controls how fast Kronos buildings & units unbuild.  
+	 * Controls how fast Kronos buildings and units unbuild.  
 	 */
 	public float unbuildFactorLinked;
 
