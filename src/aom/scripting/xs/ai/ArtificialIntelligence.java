@@ -5,8 +5,8 @@ import aom.scripting.datatypes.*;
 /**
  * This class provides a collection of AI commands that don't fit in any of the subcategories.
  * 
- * @see <a href="{@docRoot}/AI Reference.xs">AoM Reference</a>
- * @see <a href="{@docRoot}/AI XReference.xs">AoT Reference</a>
+ * @see <a href="{@docRoot}/resources/ai_reference.xs">AoM AI Reference</a>
+ * @see <a href="{@docRoot}/resources/ai2_reference.xs">AoT AI Reference</a>
  * 
  * @sync 	All AI commands are executed locally on the computer of the host and 
  * 			the results (move, build, train, research, ...) are sent to the participating players. 
@@ -20,7 +20,7 @@ public abstract class ArtificialIntelligence {
 	public final vector cInvalidVector;
 	
 	/**
-	 * The origin vector, this is the south corner of the map.
+	 * The origin vector. Equals <code>vector(0.0, 0.0, 0.0)</code>, the south corner of the map.
 	 */
 	public final vector cOriginVector;
 	

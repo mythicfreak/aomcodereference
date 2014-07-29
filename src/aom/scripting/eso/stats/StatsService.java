@@ -14,7 +14,7 @@ import org.w3c.dom.Document;
  * 
  * Query specific XML should be inserted where the &lt;myQueryXml /&gt; template is shown. 
  * 
- * @see <a href="../../../../eso.dtd">Detailed Query Format in DTD</a>
+ * @see <a href="{@docRoot}/resources/eso.dtd">Detailed Query Format in DTD</a>
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */

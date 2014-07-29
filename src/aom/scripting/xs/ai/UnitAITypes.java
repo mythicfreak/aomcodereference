@@ -14,7 +14,7 @@ package aom.scripting.xs.ai;
  * </pre>
  * </p>
  * 
- * <a href="{@docRoot}/unitaitypes.txt">unitaitypes.txt file</a>.
+ * @see <a href="{@docRoot}/resources/unitaitypes.txt">unitaitypes.txt file</a>.
  *  
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */

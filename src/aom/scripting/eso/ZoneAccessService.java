@@ -1,4 +1,5 @@
 package aom.scripting.eso;
+//TODO find vanilla ZoneServices URL
 
 /**
  * This is an interface specifying what functionality the Zone Access Service offers.
@@ -6,6 +7,8 @@ package aom.scripting.eso;
  * 
  * @see <a href="http://aom.eso.com/ZoneServices/ZoneAccessService.asmx">Zone Access Service</a>
  * @see <a href="http://aom.eso.com/ZoneServices/ZoneAccessService.asmx?wsdl">Zone Access Service WSDL</a>
+ * 
+ * @note There are two different services for AoM and AoT respectively, although they look almost identical.
  * 
  * <p>Typical login sequence:
  * <ol>
@@ -27,6 +30,7 @@ package aom.scripting.eso;
  *    <li>ZoneAccessService.GetServiceTicket (Stats)</li>
  * </ol>
  * </p>
+ * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */
 public interface ZoneAccessService {

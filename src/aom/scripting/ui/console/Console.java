@@ -86,7 +86,7 @@ public abstract class Console {
 	 * 
 	 * <p>All Edit Modes</p>
 	 * 
-	 * @param command Any function found in this package.
+	 * @param command Any sequence of functions found in this package. There is a rather short length limit on this parameter. This limitation does not apply to keys bound in the data/DefaultKeyMap.xml file or commands in e.g. UI buttons.
 	 * 
 	 * @see InputConfig#allowMultipleBinds
 	 * @see #editMode(string)

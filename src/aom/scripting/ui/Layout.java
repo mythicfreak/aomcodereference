@@ -9,6 +9,8 @@ import java.util.List;
  * The Layout element is at the root of every file.
  * It contains only a set of Gadgets and possibly 1 Position element.
  * 
+ * @see <a href="{@docRoot}/resources/layout.dtd">Detailed Layout Format in DTD</a>
+ * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */
 public class Layout {
