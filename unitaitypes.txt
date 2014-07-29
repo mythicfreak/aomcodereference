@@ -1,0 +1,159 @@
+//==============================================================================
+// unitaitypes.txt
+//
+// Copyright (c) 2000, Ensemble Studios
+//
+//==============================================================================
+
+//=============================================================================
+// Format:
+// Type "Name of type" (this will be the name you use in proto.txt)
+// Attack                        Turns can attack ON for every type.
+// NoAttack                      Turns can attack OFF for every type.
+// Attack "Unit Type"            Turns can attack ON for "Unit Type"
+// NoAttack "Unit Type"          Turns can attack OFF for "Unit Type"
+// AutoAttack                    Turns auto attack ON for every type.
+// NoAutoAttack                  Turns auto attack OFF for every type.
+// AutoAttack "Unit Type"        Turns auto attack ON for "Unit Type"
+// NoAutoAttack "Unit Type"      Turns auto attack OFF for "Unit Type"
+// RespondToAttack               Turns attack response ON for every type.
+// NoRespondToAttack             Turns attack response OFF for every type.
+// RespondToAttack "Unit Type"   Turns attack response ON for "Unit Type"
+// RespondToAttack "Unit Type"   Turns attack response OFF for "Unit Type"
+// NoRunAway                     Restricts these units from running away when they cannot return an attack
+//
+// Once you declare another Type, the previous Type is done and cannot be modified.
+
+//=============================================================================
+// 
+//=============================================================================
+// STANDARD
+
+Type "Passive"
+// For units that have no attack
+// == Default AI
+NoAttack
+NoAutoAttack
+NoRespondToAttack
+
+Type "Civilian"
+Attack "LogicalTypeVillagersAttack"
+NoAutoAttack
+RespondToAttack "LogicalTypeVillagersRespondToAttack"
+
+Type "Scout"
+Attack "LogicalTypeHandUnitsAttack"
+NoAutoAttack
+RespondToAttack "LogicalTypeScoutsRespondToAttack"
+
+Type "HandCombative"
+// For units that can fight, like soldiers
+Attack "LogicalTypeHandUnitsAttack"
+AutoAttack "LogicalTypeHandUnitsAutoAttack"
+RespondToAttack "LogicalTypeHandUnitsAttack"
+
+Type "RangedCombative"
+// For units that can fight, like soldiers, and shoot flying units
+Attack "LogicalTypeRangedUnitsAttack"
+AutoAttack "LogicalTypeRangedUnitsAutoAttack"
+RespondToAttack "LogicalTypeRangedUnitsAttack"
+
+Type "RangedSiege"
+// For Catapult, Petrobolos, Ballista
+Attack "LogicalTypeRangedUnitsAttack"
+AutoAttack "LogicalTypeSiegeAutoAttack"
+RespondToAttack "LogicalTypeRangedUnitsAttack"
+
+Type "Ram"
+Attack "LogicalTypeHandUnitsAttack"
+AutoAttack "LogicalTypeSiegeAutoAttack"
+RespondToAttack "LogicalTypeHandUnitsAttack"
+
+//=============================================================================
+// ANIMALS
+
+Type "SuperPredator"
+// like a wolf, but will attack army units
+Attack "LogicalTypeSuperPredatorsAttack"
+AutoAttack "LogicalTypeSuperPredatorsAutoAttack"
+RespondToAttack "LogicalTypeSuperPredatorsAttack"
+
+Type "Predator"
+// Eats human units, like a Wolf
+Attack "LogicalTypePredatorsAttack"
+AutoAttack "LogicalTypePredatorsAutoAttack"
+RespondToAttack "LogicalTypePredatorsAttack"
+
+Type "Reactive"
+// Fights back if attacked, like a Boar
+Attack "LogicalTypePredatorsAttack"
+NoAutoAttack
+RespondToAttack "LogicalTypePredatorsAttack"
+
+Type "Prey"
+// Will run away if attacked, like a Deer
+NoAttack
+NoAutoAttack
+NoRespondToAttack
+
+Type "HerdAnimal"
+// Will not run away if attacked
+NoAttack
+NoAutoAttack
+NoRespondToAttack
+NoRunAway
+
+//=============================================================================
+// UNUSUAL
+
+Type "Petard"
+Attack "LogicalTypeHandUnitsAutoAttack"
+NoAutoAttack
+NoRespondToAttack
+NoRunAway
+
+Type "Meteor"
+Attack "Building"
+NoAutoAttack
+NoRespondToAttack
+
+Type "Lightning"
+Attack "Unit"
+NoAutoAttack
+NoRespondToAttack
+
+Type "Earthquake"
+NoAutoAttack
+Attack "LogicalTypeEarthquakeAttack"
+NoRespondToAttack
+
+Type "Tornado"
+NoAutoAttack
+Attack "LogicalTypeTornadoAttack"
+NoRespondToAttack
+
+Type "Serpent"
+Attack "LogicalTypePredatorsAttack"
+AutoAttack "LogicalTypePredatorsAttack"
+RespondToAttack "LogicalTypePredatorsAttack"
+
+Type "HeroBoar"
+NoAutoAttack
+Attack "LogicalTypeHandUnitsAttack"
+RespondToAttack "LogicalTypeHandUnitsAttack"
+
+Type "Sea Serpent"
+AutoAttack "LogicalTypeSeaSerpentAttack"
+Attack "LogicalTypeSeaSerpentAttack"
+RespondToAttack "LogicalTypeSeaSerpentAttack"
+
+Type "Kraken"
+Attack "LogicalTypeHandUnitsAttack"
+AutoAttack "LogicalTypeHandUnitsAutoAttack"
+RespondToAttack "LogicalTypeHandUnitsAttack"
+NoRunAway
+
+Type "HeroDwarf"
+Attack "LogicalTypeVillagersAttack"
+AutoAttack "LogicalTypeHandUnitsAttack"
+RespondToAttack "LogicalTypeVillagersAttack"

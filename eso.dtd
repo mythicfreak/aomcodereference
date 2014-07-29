@@ -1,0 +1,137 @@
+<!-- Requests and responses should be encoded in Unicode (UTF-16). -->
+
+<!-- Client Request -->
+<!ELEMENT clr (cmd?, co, (qgs | qsg | qest | qer | qse | qed)*)>
+<!ATTLIST clr>
+
+<!-- Command -->
+<!-- string Value (v) -->
+<!ELEMENT cmd EMPTY>
+<!ATTLIST cmd
+	v						CDATA																							#FIXED "query"
+>
+
+<!-- Configuration Settings -->
+<!-- enum GameTitle (g) -->
+<!-- int MajorSchemaVersion (s) -->
+<!-- string GameVersion (z) -->
+<!-- int Timestamp (t): unix style -->
+<!-- int U: ??? -->
+<!ELEMENT co EMPTY>
+<!ATTLIST co
+	g						(AOM_RC0 | AOM_XPACK)																			#REQUIRED
+	s						CDATA																							#FIXED "100"
+	z						(1.10 | 1.0.3)																					#IMPLIED
+	t						CDATA																							#IMPLIED
+	U						CDATA																							#IMPLIED
+>
+
+<!-- Game Details Query -->
+<!-- int QueryID (id): unique query identifier -->
+<!-- string GameID (gi): game identifier, as provided in the QSG query. -->
+<!ELEMENT qgs EMPTY>
+<!ATTLIST qgs
+	id						CDATA																							#IMPLIED
+	gi						CDATA																							#REQUIRED
+>
+
+<!-- Player Games Query -->
+<!-- int QueryID (id): unique query identifier -->
+<!-- string EntityName (en): Player Name -->
+<!-- enum EntityType (et) -->
+<!-- enum GameMode (md) -->
+<!-- int FirstEntry (fe): 0 <= offset <= 1000 -->
+<!-- int MaxEntries (me): 0 <= max <= 1000 -->
+<!-- Note: when no player is provided, games of all players (in the given mode) will be returned. -->
+<!-- Note: when no mode is provided, games in all modes (of the given player) will be returned. -->
+<!ELEMENT qsg EMPTY>
+<!ATTLIST qsg
+	id						CDATA																							#IMPLIED
+	en						CDATA																							#IMPLIED
+	et						(ZS_Human | ZS_AI)																				#IMPLIED
+	md						(ZS_Supremacy | ZS_Conquest | ZS_Lightning | ZS_Deathmatch | ZS_Custom | ZS_PersistentStats)	#IMPLIED
+	fe						CDATA																							"0"
+	me						CDATA																							"1000"
+>
+
+<!-- Player Info Query -->
+<!-- int QueryID (id): unique query identifier -->
+<!-- string EntityName (en): Player Name -->
+<!-- enum EntityType (et) -->
+<!-- enum GameMode (md) -->
+<!-- enum TimePeriod (tp) -->
+<!-- int si: ??? -->
+<!-- Note: when no player is provided, community stats will be returned. -->
+<!-- Note: when no player is provided, and ZS_PersistentStats mode is chosen, the error "Backend Database is currently offline." will be returned. -->
+<!ELEMENT qest EMPTY>
+<!ATTLIST qest
+	id						CDATA																							#IMPLIED
+	en						CDATA																							#IMPLIED
+	et						(ZS_Human | ZS_AI)																				#REQUIRED
+	md						(ZS_Supremacy | ZS_Conquest | ZS_Lightning | ZS_Deathmatch | ZS_Custom | ZS_PersistentStats)	#REQUIRED
+	tp						(ZS_AllTime | ZS_Monthly | ZS_Weekly)															#REQUIRED
+	si						CDATA																							#IMPLIED
+>
+
+<!-- Player Ranking Query -->
+<!-- int Query ID (id): unique query identifier -->
+<!-- string EntityName (en): Player Name -->
+<!-- enum EntityType (et) -->
+<!-- enum GameMode (md) -->
+<!-- enum TimePeriod (tp) -->
+<!-- int si: ??? -->
+<!-- int NumberPrevious (np): 0 <= np <= 1000 -->
+<!-- int NumberNext (nn): 0 <= nn <= 1000 -->
+<!-- string RankingsTableName (rn): Selects the table to be used to retrieve rankings from. -->
+<!-- Note: when no player is provided, rankings will be returned centered around the #1 player. -->
+<!-- Note: when ZS_PersistentStats mode is chosen, the error "Invalid mode,class,ranktablename combination" will be returned. -->
+<!ELEMENT qer EMPTY>
+<!ATTLIST qer
+	id						CDATA																							#IMPLIED
+	en						CDATA																							#IMPLIED
+	et						(ZS_Human | ZS_AI)																				#REQUIRED
+	md						(ZS_Supremacy | ZS_Conquest | ZS_Lightning | ZS_Deathmatch)										#REQUIRED
+	tp						(ZS_AllTime | ZS_Monthly | ZS_Weekly)															#REQUIRED
+	si						CDATA																							#IMPLIED
+	np						CDATA																							#REQUIRED
+	nn						CDATA																							#REQUIRED
+	rn						(ZS_TopPlayers)																					#REQUIRED
+>
+
+<!-- Player Search Query -->
+<!-- int Query ID (id): unique query identifier -->
+<!-- string EntityName (en): Player Name -->
+<!-- enum EntityType (et) -->
+<!-- int FirstEntry (fe): 0 <= offset <= 1000 -->
+<!-- int MaxEntries (me): 0 <= max <= 1000 -->
+<!ELEMENT qse EMPTY>
+<!ATTLIST qse
+	id						CDATA																							#IMPLIED
+	en						CDATA																							#REQUIRED
+	et						(ZS_Human | ZS_AI)																				#REQUIRED
+	fe						CDATA																							"0"
+	me						CDATA																							"1000"
+>
+
+<!-- Player Units Query -->
+<!-- int Query ID (id): unique query identifier -->
+<!-- string EntityName (en): Player Name -->
+<!-- enum EntityType (et) -->
+<!-- enum GameMode (md) -->
+<!-- enum TimePeriod (tp) -->
+<!-- int FirstEntry (fe): 0 <= offset <= 1000 -->
+<!-- int MaxEntries (me): 0 <= max <= 1000 -->
+<!-- enum DataGroup (dg) -->
+<!-- Note: when no player is provided, community stats will be returned. -->
+<!-- Note: only use ZS_Friends in combination with ZS_PersistentStats and a valid player. -->
+<!ELEMENT qed EMPTY>
+<!ATTLIST qed
+	id						CDATA																							#IMPLIED
+	en						CDATA																							#IMPLIED
+	et						(ZS_Human | ZS_AI)																				#REQUIRED
+	md						(ZS_Supremacy | ZS_Conquest | ZS_Lightning | ZS_Deathmatch | ZS_Custom | ZS_PersistentStats)	#REQUIRED
+	tp						(ZS_AllTime | ZS_Monthly | ZS_Weekly)															#REQUIRED
+	fe						CDATA																							"0"
+	me						CDATA																							"1000"
+	dg						(ZS_GP | ZS_MU | ZS_EU | ZS_MyU | ZS_Friends)													#REQUIRED
+>
