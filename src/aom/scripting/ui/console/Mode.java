@@ -24,7 +24,7 @@ import aom.scripting.datatypes.string;
 		<ul>
 			<li>HotKeySetup</li>
 			<li>Options</li>
-			<li>ModManager (Steam Workshop in AoM:EE</li>
+			<li>ModManager (Steam Workshop in AoM:EE)</li>
 		</ul>
 	</li>
 	<li>Campaign</li>

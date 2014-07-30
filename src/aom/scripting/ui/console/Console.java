@@ -23,8 +23,9 @@ public abstract class Console {
 	/** 
 	 * Maps an input event to the given command, in the given context.
 	 * 
-	 * @param 	key 
-	 * 			<div><img src="{@docRoot}/resources/keys.png" alt="Keymap"></div>
+	 * @param 	key	The input key to be bound to an action.
+	 * 				When prefixed with a plus, the given action is executed on both keydown and keyup, with param keyState 0 and 1 respectively.
+	 * 				<img src="{@docRoot}/resources/keys.png" alt="keymap">
 	 * 
 	 * @param context 
 	 * 
