@@ -3,6 +3,7 @@ package aom.scripting.xs.tr;
 import aom.scripting.datatypes.bool;
 import aom.scripting.datatypes.string;
 import aom.scripting.datatypes.vector;
+import aom.scripting.xs.xs.ExternalSubroutines;
 
 /**
  * This class provides a collection of Trigger commands concerning Units.
@@ -134,8 +135,8 @@ public class Unit {
 	/** Returns true if the specified unit is selected. */
 	public native bool trUnitTypeIsSelected(string protoUnit);
 
-	/** Returns true if the player can see the selected unit, and it is on screen. */
-	public native bool trUnitVisToPlayer(int playerID);
+	/** Returns true if the {@link ExternalSubroutines#xsGetContextPlayer() context player} can see the selected unit, and it is on screen. */
+	public native bool trUnitVisToPlayer();
 	
 	/** Sets whether or not units can do their idle processing. */
 	public native void trSetUnitIdleProcessing(bool b);

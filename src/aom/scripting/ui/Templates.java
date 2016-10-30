@@ -176,7 +176,7 @@ AbstractVillager:
 	public native string gameVersion();
 	/** @param index range: 0 - 3 */
 	public native string GPRechargeTimeRemaining(int index);
-	/** AI army debug text */;
+	/** AI army debug text */
 	public native string kbArmyDebugText();
 	/** AI resources debug text */
 	public native string kbResourcesDebugText();
