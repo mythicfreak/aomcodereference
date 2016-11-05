@@ -3,6 +3,7 @@ package aom.scripting.xs.kb;
 import aom.scripting.datatypes.bool;
 import aom.scripting.datatypes.string;
 import aom.scripting.datatypes.vector;
+import aom.scripting.xs.xs.ExternalSubroutines;
 
 /**
  * This class provides a collection of KB commands concerning Paths and Attack Routes.
@@ -43,9 +44,17 @@ public class Path {
 	public native bool kbPathAddWaypoint(int pathID, vector waypoint);
 	/** Returns the appropriate waypoint from the given path. */
 	public native vector kbPathGetWaypoint(int pathID, long waypointNumber);
-	/** Returns true if the given unit type can path from pointA to pointB. */
+	/** Returns true if the given unit type can path from pointA to pointB.
+	 * <p>
+	 * Requires a proper {@link ExternalSubroutines#xsSetContextPlayer(int) context player}.
+	 * <p>
+	 * The parameter {@code range} doesn't seem to do anything any can be omitted. */
 	public native bool kbCanSimPath(vector pointA, vector pointB, long protoUnitTypeID, float range);
-	/** Returns true if the given unit type can path from pointA to pointB. */
+	/** Returns true if the given unit type can path from pointA to pointB.
+	 * <p>
+	 * Requires a proper {@link ExternalSubroutines#xsSetContextPlayer(int) context player}.
+	 * <p>
+	 * Unlike {@link #kbCanSimPath(vector, vector, long, float) kbCanSimPath}, this function crashes the game if the {@code range} parameter is too low. */
 	public native bool kbCanPath2(vector pointA, vector pointB, long protoUnitTypeID, float range);
 	/** Returns the Route ID if successful. */
 	public native int kbCreateAttackRoute(string name, int startAreaID, int goalAreaID, int numInitialRoutes);

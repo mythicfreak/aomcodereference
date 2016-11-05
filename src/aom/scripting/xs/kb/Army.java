@@ -3,11 +3,22 @@ package aom.scripting.xs.kb;
 import aom.scripting.datatypes.bool;
 import aom.scripting.datatypes.string;
 import aom.scripting.datatypes.vector;
+import aom.scripting.xs.xs.ExternalSubroutines;
 
 /**
  * This class provides a collection of KB commands concerning Armies.
  * An army is a logical grouping of units. Units can only be part of 1 army 
  * and an army can only consist of 30 unit max.
+ * <p>
+ * All army functions require a proper {@link ExternalSubroutines#xsSetContextPlayer(int) context player}.
+ * <p>
+ * Armies from "group" parameters in triggers come in the form "player, armyID" (without quotes),
+ * so can be extracted using e.g. {@code int armyID = xsVectorGetY(vector(%army%,0));}.
+ * <p>
+ * Armies 1 through 9 are the player's selection groups (the banners in the top left corner of a screen) and always exist.
+ * They are correctly filled with the selected units, but modifying them has no effect for the player.
+ * <p>
+ * Army 10 is the army "11" one usually creates first in the editor and only exists if created, just like any further armies.
  * 
  * @author Mythic_Freak - mythic.freak[a]gmail.com
  */
@@ -18,7 +29,7 @@ public class Army {
 	public native bool kbArmyDestroy(int armyID);
 	/** Returns the number of armies. */
 	public native int kbArmyGetNumber();
-	/** Returns the ID of the given army. */
+	/** Finds an army with the given name (as set {@link #kbArmyCreate(string, bool) at creation} or in the editor). */
 	public native int kbArmyGetID(string name);
 	/** Returns the index'th army ID. */
 	public native int kbArmyGetIDByIndex(long index);

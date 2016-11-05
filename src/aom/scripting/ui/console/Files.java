@@ -87,19 +87,19 @@ public class Files {
 	public native void loadRecentFile(string filename);
 	
 	/**
-	 * Load some triggers.
+	 * Replace all triggers with those loaded from the given file.
 	 */
-	public native void uiLoadTriggers();
+	public native void uiLoadTriggers(string filename);
 
 	/**
-	 * Save some triggers.
+	 * Save all triggers to the given file.
 	 */
-	public native void uiSaveTriggers();
+	public native void uiSaveTriggers(string filename);
 
 	/**
-	 * Import some triggers.
+	 * Opens a dialog to load triggers from a file, replacing all existing ones.
 	 */
-	public native void uiImportTriggers(string file);
+	public native void uiImportTriggers();
 
 	/**
 	 * Load some triggers.
@@ -107,7 +107,7 @@ public class Files {
 	public native void doTriggerImport();
 
 	/**
-	 * Save some triggers.
+	 * Opens a dialog to save all triggers to a file
 	 */
-	public native void uiExportTriggers(string file);
+	public native void uiExportTriggers();
 }

@@ -36,7 +36,9 @@ public abstract class Triggers {
 	/** Returns whether that GP type, for that player, is currently in effect. */
 	public native bool trCheckGPActive(string godPower, int playerID);
 
-	/** Clears a counter display. */
+	/** Clears the current fake-counter display.
+	 * 
+	 * @see #trSetCounterDisplay(string) */
 	public native void trClearCounterDisplay();
 
 	/** Abort a counter */
@@ -72,7 +74,7 @@ public abstract class Triggers {
 
 	/** 
 Cause an event to occur.
-
+<p>
 Under the hood, an eventID is generated for this event.
 This event is registered in the default event handler using
 {@link #trEventSetHandler(int, string) trEventSetHandler(myEventID, "eventHandler");}.
@@ -156,16 +158,16 @@ case myEventID:
 	/** Sets the objective text. */
 	public native void trObjectiveSetID(int missionNum, int objectiveID);
 
-	/** Modify construction rate. */
+	/** Modify construction rate for all players. */
 	public native void trRateConstruction(float rate);
 
-	/** Modify research rate. */
+	/** Modify research rate for all players. */
 	public native void trRateResearch(float rate);
 
-	/** Restore all rates to normal. */
+	/** Restore all rates to normal for all players. */
 	public native void trRatesNormal();
 
-	/** Modify training rate */
+	/** Modify training rate for all players */
 	public native void trRateTrain(float rate);
 
 	/** 
@@ -182,11 +184,13 @@ case myEventID:
 	 */
 	public native void trSetCivilizationNameOverride(int playerID, string civName);
 
-	/** Sets the current fake-counter text. */
+	/** Sets the current fake-counter text.
+	 * 
+	 * @see #trClearCounterDisplay() */
 	public native void trSetCounterDisplay(string text);
 
 	/**
-	 * Enable or Disable GP blocking (e.g. by isis monuments).
+	 * Enable or Disable GP blocking (e.g. by Isis monuments).
 	 * 
 	 * @since AoT 
 	 */
@@ -281,21 +285,22 @@ case myEventID:
 	public native void trWriteToLog(string message);
 	
 	/**
-	 * Shows the player's kill/loss ratio as the score.
+	 * Shows the player's kill/loss ratio as the score in the middle of the screen.
+	 * This message cannot be removed again.
 	 * 
 	 * @since AoM:EE
 	 */
 	public native void trShowScoreMessage(int player, string soundfile);
 
 	/**
-	 * Shows the player's kill/loss ratio as the score persistently.
+	 * Shows the player's kill/loss ratio as the score at the top of the screen.
 	 * 
 	 * @since AoM:EE
 	 */
 	public native void trShowPersistentScoreMessage(int player);
 
 	/**
-	 * Hide the peristent score message.
+	 * Hide the score message at the top of the screen.
 	 * 
 	 * @since AoM:EE
 	 */
@@ -328,6 +333,15 @@ case myEventID:
 	 * @since AoM:EE
 	 */
 	public native void trAddToPlayerCustomScore(int player, int deltaScore);
+	
+	/**
+	 * Displays the given text along with the player's current score in a centered message box with an OK button.
+	 * <p>
+	 * The subtitle parameter doesn't seem to do anything.
+	 * 
+	 * @since AoM:EE
+	 */
+	public native void trScoreMsgBox(int player, string text, string subtitle, int eventID);
 	
 	private Triggers() {
 		cNumberPlayers = 0;

@@ -70,7 +70,8 @@ public class TechTree {
 	public native int kbTechTreeGetMinorGodMythUnitTotal(int minorGodTechID) ;
 	/** Returns the protoID of a myth unit */
 	public native int kbTechTreeGetMinorGodMythUnitByIndex(int minorGodTechID, int index) ;
-	/** Returns the minorGodTechID of the given index, given the age, -1 means the next age. */
+	/** Returns the minorGodTechID of the given index, given the age, -1 means the next age. 
+	 * <p> Works in AI files, but not in triggers. */
 	public native int kbTechTreeGetMinorGodChoices(int index, int age) ;
 	/** Returns the number of matrix unit type IDs. */
 	public native int kbTechTreeGetNumberMatrixUnitTypeIDs();

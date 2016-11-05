@@ -45,7 +45,7 @@ public class Player {
 	public native void trPlayerKillAllUnits(int playerID);
 
 	/** Adds/removes LOS between players. */
-	public native void trPlayerModifiedLOS(int playerID, bool canSee, int player2ID);
+	public native void trPlayerModifyLOS(int playerID, bool canSee, int player2ID);
 
 	/** Resets the black map for a given <u>human</u> player. */
 	public native void trPlayerResetBlackMap(int playerID);

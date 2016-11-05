@@ -32,7 +32,7 @@ public class Camera {
 	public native void uiLookAtUnitByName(string scenarioName);
 
 	/** Moves the camera to see the first instance of proto unit X owned by the current player.*/
-	public native void uiLookAtProto();
+	public native void uiLookAtProto(string proto);
 	
 	/** 
 	 * Sets whether camera limiting is on.

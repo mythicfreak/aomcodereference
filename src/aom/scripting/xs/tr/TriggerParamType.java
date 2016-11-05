@@ -43,7 +43,7 @@ public enum TriggerParamType {
 	
 	/**
 	* Army selection tools.
-	* @example {@code 1,11} (player 1, army 11)
+	* @example {@code 1,10} (player 1, army 11)
 	*/
 	GROUP,
 	
