@@ -14,8 +14,10 @@ import aom.scripting.datatypes.vector;
 public class Vector {
 	private Vector() {}
 	
-	/** Create a simple vector.
-	 * x, y and z must be literals! 
+	/**
+	 * Creates a simple vector where all three coordinates are <b>literal numbers</b> [like {@code vector(1,2,3)}, but not {@code vector(x,0,z)}].
+	 * Use {@link Vector#xsVectorSet(float, float, float) xsVectorSet} to create a vector from any kind of values,
+	 * including literals, variables, function calls, etc.
 	 * 
 	 * @see #xsVectorSet(float, float, float)
 	 */
@@ -27,18 +29,20 @@ public class Vector {
 	/** Returns the z component of the given vector.  */
 	public native float xsVectorGetZ( vector v );
 	/** Set the x component of the given vector, returns the new vector.  */
-	public native float xsVectorSetX( vector v, float x );
+	public native vector xsVectorSetX( vector v, float x );
 	/** Set the y component of the given vector, returns the new vector.  */
-	public native float xsVectorSetY( vector v, float y );
+	public native vector xsVectorSetY( vector v, float y );
 	/** Set the z component of the given vector, returns the new vector.  */
-	public native float xsVectorSetZ( vector v, float z );
+	public native vector xsVectorSetZ( vector v, float z );
 	/** 
-	 * Set the 3 components into a vector, returns the new vector.
-	 * Contrary to the vector() function, here non-literals (e.g. function calls, ...) are allowed too.
+	 * Creates a new vector from three coordinates.
+	 * <p>
+	 * Contrary to the {@link #vector(float, float, float) vector()} pseudo-function, here non-literals (e.g. function calls or variables) are allowed too.
 	 */
 	public native vector xsVectorSet( float x, float y, float z );
 	/** Returns the length of the given vector.  */
 	public native float xsVectorLength( vector v );
-	/** Returns the normalized version of the given vector.  */
+	/** Returns the normalized version of the given vector,
+	 * i.e. a vector of length one that points in the same direction as the given vector.  */
 	public native vector xsVectorNormalize( vector v);
 }

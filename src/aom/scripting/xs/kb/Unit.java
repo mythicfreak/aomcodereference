@@ -3,6 +3,7 @@ package aom.scripting.xs.kb;
 import aom.scripting.datatypes.bool;
 import aom.scripting.datatypes.string;
 import aom.scripting.datatypes.vector;
+import aom.scripting.xs.rm.Trigger;
 
 /**
  * This class provides a collection of KB commands concerning Units and Protounits.
@@ -124,7 +125,9 @@ public class Unit {
 	public native int kbUnitGetNumberWorkers(int unitID);
 	/** Returns the index'th worker unit ID. */
 	public native int kbUnitGetWorkerID(int unitID, int index);
-	/** Returns true if the unit is currently visible to the player. */
+	/** Returns true if the unit is currently visible to the player.
+	 * 
+	 *  @see aom.scripting.xs.tr.Unit#trUnitHasLOS(int)*/
 	public native bool kbUnitVisible(int unitID);
 	
 	//hide constructor
