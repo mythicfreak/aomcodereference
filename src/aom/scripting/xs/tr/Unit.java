@@ -19,8 +19,10 @@ public class Unit {
 	/** Does % percent of a unit's total HP in instant typeless damage. */
 	public native void trDamageUnitPercent(float percent);
 
-	/** All units within distance of the selected reference object that match type take damage. */
-	public native void trDamageUnitsInArea(int playerID, int unitType, float dist, float damage);
+	/** All units within distance of the selected reference object that match the type take damage.
+	 * <p>
+	 * The unit type can be a unit type like {@code "LogicalTypeCanBeHealed"} or {@code "All"}. */
+	public native void trDamageUnitsInArea(int playerID, string unitType, float dist, float damage);
 	
 	/** Returns true if all selected units are alive */
 	public native bool trUnitAlive();
@@ -91,7 +93,7 @@ public class Unit {
 	public native bool trUnitHasLOS(int playerID);
 
 	/** Does something to highlight the units selected */
-	public native void trUnitHighlight(int seconds) ;
+	public native void trUnitHighlight(int seconds, bool flash) ;
 
 	/** Determines if the selected units are owned by the player specified */
 	public native bool trUnitIsOwnedBy(int playerID);

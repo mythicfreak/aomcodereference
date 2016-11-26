@@ -56,7 +56,7 @@ public enum TriggerParamType {
 	/**
 	* Select sound style tools.
 	* 
-	* @note Yes, that's a correct example. The 1 seems to be ununsed, might be something like volume level though.
+	* @note Yes, that's a correct example. The 1 seems to be unused.
 	* @example {@code music_file","1}
 	*/
 	SOUND,
@@ -165,7 +165,11 @@ public enum TriggerParamType {
 	
 	/**
 	* A drop down list of triggers.
-	* @example {@code Trigger0}
+	* <p>
+	* Does not allow selection of the current trigger.
+	* <p>
+	* When a trigger is chosen in the drop-down list, an event ID is generated for it, which is the value of this parameter.
+	* @example {@code 0}
 	*/
 	EVENT,
 	

@@ -302,7 +302,7 @@ public abstract class ArtificialIntelligence {
 	/** Tells the AI if this is a water map or not. */
 	public native void aiSetWaterMap(bool v);
 	/** Tells us if the AI thinks this is a water map or not. */
-	public native bool aiSetWaterMap();
+	public native bool aiGetWaterMap();
 	/** Queues the auto savegame. */
 	public native void aiQueueAutoSavegame(int saveNumber);
 	/** Returns true, if this is a multiplayer game. */

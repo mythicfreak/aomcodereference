@@ -20,7 +20,7 @@ public class Base {
 	/** Returns the number of units that match the criteria. */
 	public native int kbBaseGetNumberUnits(int playerID, int baseID, int relation, int unitTypeID);
 	/** Finds/Creates a 'forward' military base against the given enemy base. */
-	public native int kbBaseFindCreateResourceBase(int enemyPlayerID, int enemyBaseID);
+	public native int kbBaseFindCreateForwardBase(int enemyPlayerID, int enemyBaseID);
 	/** Destroys the given base. */
 	public native bool kbBaseDestroy(int playerID, int baseID);
 	/** Destroys all of the bases for the given player. */
@@ -97,8 +97,6 @@ public class Base {
 	public native int kbBaseGetIDByIndex(int playerID, int index);
 	/** Creates a base. */
 	public native int kbBaseCreate(int playerID, string name, vector position, float distance);
-	/** Finds/Creates a resource base. */
-	public native int kbBaseFindCreateResourceBase(int resourceType, int resourceSubType, int parentBaseID);
 	
 	//hide constructor
 	private Base() {}

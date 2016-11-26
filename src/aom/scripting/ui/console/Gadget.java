@@ -23,7 +23,9 @@ public class Gadget {
 	/** Closes (as if clicked on the close button) any active dialog.*/
 	public native void uiCloseDialog();
 	
-	/** Acts like the current cycle gadget has been pressed.*/
+	/** Acts like the current cycle gadget has been pressed.
+	 * <p>
+	 * Does not seem to work any more in the extended edition. */
 	public native void uiCycleCurrentActivate();
 	
 	/** Scrolls the gadget up one unit.

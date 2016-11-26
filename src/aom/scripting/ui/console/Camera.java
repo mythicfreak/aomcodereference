@@ -26,7 +26,7 @@ public class Camera {
 	public native void uiLookAtSelection();
 
 	/** Moves the camera to see the specified Unit.*/
-	public native void uiLookAtUnit();
+	public native void uiLookAtUnit(int unitID);
 
 	/** Moves the camera to see the specified Unit.*/
 	public native void uiLookAtUnitByName(string scenarioName);

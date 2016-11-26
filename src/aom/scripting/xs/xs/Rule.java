@@ -26,7 +26,7 @@ rule &lt;my_rule_name&gt;
  */
 public class Rule {
 	/**
-	 * Holds the activation time of the current rule in milliseconds.
+	 * Holds the activation time of the current rule in seconds.
 	 */
 	public final int cActivationTime;
 	
