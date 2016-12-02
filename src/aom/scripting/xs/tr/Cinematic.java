@@ -21,22 +21,31 @@ public class Cinematic {
 	/** Loads a camera track. */
 	public native void trCamTrackLoad(string filename);
 
-	/** Plays the current camera track. */
+	/** Plays the current camera track, and optinally calls and event when done.
+	 * <p>
+	 * If the given duration is -1, the duration of the track is used. */
 	public native void trCamTrackPlay(float duration, int eventID);
 	
-	/** Returns the abort cinematic status. */
+	/** Returns whether the player has requested the cinematic to be skipped. */
 	public native bool trCinematicAbort();
 
-	/** Aborts the cinematic. */
+	/** Pretends a player has requested a cinematic to be skipped, i.e. {@link #trCinematicAbort()} will return true after this call. */
 	public native void trCinematicDoAbort();
 	
 	/** Forces models to be in non-cinematic mode. */
 	public native void trForceNonCinematicModels();
 	
-	/** Turns letter box mode on or off. */
+	/** Turns letter box mode (cinematic mode) on or off. */
 	public native void trLetterBox(bool on);
 	
-	/** Puts up a big movie-credits style text overlay, optionally in a strange location. */
+	/**
+	 * Puts up a big movie-credits style text overlay, optionally in a strange location.
+	 * <p>
+	 * x, y, and width are relative to the top left of a 1024x768 pixels display. If any of these values is -1, the default position is used.
+	 * <p>
+	 * On widescreen monitors, the text will still be at the very left of the monitor at x=0,
+	 * but somewhere in the right center at x=1000, and lines will wrap there as if the screen ended.
+	 */
 	public native void trOverlayText(string message, float duration, int x, int y, int width);
 	
 	/** 

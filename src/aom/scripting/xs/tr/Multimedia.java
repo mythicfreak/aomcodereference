@@ -43,14 +43,20 @@ public class Multimedia {
 	/** Displays a custom image in a dialog, with a subtitle. */
 	public native void trShowImageDialog(string texture, string subtitle);
 	
-	/** Plays the sound associated with the filename. */
-	public native void trSoundPlayDialog(string filename, float volume, int eventID, bool ignoreOnAbort, string subtitle, string portrait);
+	/** Plays the sound associated with the filename.
+	 * <p>
+	 * {@code unknown} is "1" by default, but other values don't seem to affect anything. */
+	public native void trSoundPlayDialog(string filename, string unknown, int eventID, bool ignoreOnAbort, string subtitle, string portrait);
 
-	/** Plays the sound associated with the filename. A sound parameter from the trigger XML automatically adds volume 1 to the given sound. */
-	public native void trSoundPlayFN(string filename, float volume, int eventID, string subtitle, string portrait);
+	/** Plays the sound associated with the filename.
+	 * <p>
+	 * {@code unknown} is "1" by default, but other values don't seem to affect anything. */
+	public native void trSoundPlayFN(string filename, string unknown, int eventID, string subtitle, string portrait);
 
-	/** Plays the sound associated with the filename. */
-	public native void trSoundPlayPaused(string filename, float volume, int eventID, string subtitle, string portrait);
+	/** Plays the sound associated with the filename.
+	 * <p>
+	 * {@code unknown} is "1" by default, but other values don't seem to affect anything. */
+	public native void trSoundPlayPaused(string filename, string unknown, int eventID, string subtitle, string portrait);
 
 	/** Creates a high performance sound timer and passes the eventID as data.*/
 	public native void trSoundTimer(int milliseconds, int eventID);

@@ -266,7 +266,7 @@ public abstract class Console {
 	 * 
 	 * @local
 	 */
-	public native string[] databaseFindByType(string typeName);
+	public native void databaseFindByType(string typeName);
 
 	/**
 	 * Returns name for techID.
@@ -296,7 +296,7 @@ public abstract class Console {
 	 * 
 	 * @see aom.scripting.xs.tr.Player#trPlayerSetActive(int) trPlayerSetActive(int)
 	 */
-	public native void player(int player);
+	public native void player(int setPlayer);
 
 	/** 
 	 * Toggles or sets LOS fog.
@@ -1100,7 +1100,7 @@ public abstract class Console {
 	 * 
 	 * @since AoM:EE
 	 */
-	public native void uiToggleObserverMode(int player);
+	public native void uiToggleObserverMode(int ofPlayer);
 
 	/** 
 	 * If a valid index is given, changes the perspective/FOW of the observer player to the indexed player.
@@ -1108,7 +1108,7 @@ public abstract class Console {
 	 * @since AoM:EE
 	 * @param player
 	 */
-	public native void uiChangeObserverPerspective(int player);
+	public native void uiChangeObserverPerspective(int ofPlayer);
 
 	/** 
 	 * Reveals or covers up the entire map's FOW.

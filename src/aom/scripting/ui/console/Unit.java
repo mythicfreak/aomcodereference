@@ -49,7 +49,7 @@ public class Unit {
 	 * 
 	 * @editor
 	 */
-	public native void unitSetVariation(int unitID);
+	public native void unitDecVariation(int unitID);
 
 	/** 
 	 * Sets the unit stance for all selected units to aggressive.

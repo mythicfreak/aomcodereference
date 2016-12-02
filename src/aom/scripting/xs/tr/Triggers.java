@@ -286,7 +286,8 @@ case myEventID:
 	
 	/**
 	 * Shows the player's kill/loss ratio as the score in the middle of the screen.
-	 * This message cannot be removed again.
+	 * <p>
+	 * The message can be removed with {@code gadgetUnreal("winLoseDisplay")}.
 	 * 
 	 * @since AoM:EE
 	 */

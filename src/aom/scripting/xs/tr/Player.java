@@ -91,7 +91,7 @@ public class Player {
 	 * 
 	 * @local
 	 */
-	public native void trSetPlayerDefeated();
+	public native void trSetPlayerDefeated(int playerID);
 
 	/** 
 	 * When called, the player is set to be victorious on the local machine.

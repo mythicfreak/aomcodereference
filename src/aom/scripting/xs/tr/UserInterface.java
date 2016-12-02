@@ -2,6 +2,7 @@ package aom.scripting.xs.tr;
 
 import aom.scripting.datatypes.bool;
 import aom.scripting.datatypes.string;
+import aom.scripting.ui.console.Gadget;
 
 public class UserInterface {
 	private UserInterface() {}
@@ -15,7 +16,10 @@ public class UserInterface {
 	/** Controls snow rendering. */
 	public native void trRenderSnow(float percent);
 	
-	/** Returns true if gadget is real */
+	/** Returns true if gadget is "real", i.e. visible.
+	 * @see Gadget#gadgetReal(string)
+	 * @see Gadget#gadgetUnreal(string)
+	 */
 	public native bool trIsGadgetVisible(string gadget);
 	
 	/** Fade in/out using color specified. */
