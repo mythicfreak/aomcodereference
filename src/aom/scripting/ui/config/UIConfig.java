@@ -322,8 +322,10 @@ public class UIConfig {
 
 	/**
 	 * Show time.
+	 * 1 - show
+	 * 0 - hide
 	 */
-	public bool showTime;
+	public int showTime;
 
 	/** 
 	 * Enforces gadget handle get/release counts.
